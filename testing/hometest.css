@@ -1,0 +1,243 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    color: var(--textcolor);
+    font-family: 'Roboto', monospace;
+}
+
+:root {
+    --primary-color: #1E0342;
+    --accent-color: #E1F7F5;
+    --accent2-color: #0E46A3;
+    --accent3-color: #9AC8CD;
+    --dark-color: #1E1E1E;
+    --negative-color: #FF4E4E;
+    --darkgrey-color: #6F6F6F;
+    --textfieldgray-color: #F5F5F5;
+    --plane-color: #ffffff;
+    --border-shadow: rgba(23, 26, 31, 0.252);
+    --font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+nav {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+}
+
+nav .navrow1 img {
+    width: 100px;
+}
+
+nav .navrow2 ul {
+    display: flex;
+    gap: 40px;
+}
+
+.navrow2>ul>li>a {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent-color);
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.search-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.search-form label {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+
+.search-form select {
+    padding: 0.5rem;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--plane-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.trending-jobs, .job-categories, .clients {
+    padding: 2rem 4rem;
+    text-align: center;
+}
+
+.trending-jobs h2, .job-categories h2, .clients h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.job-cards, .category-cards, .client-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.job-card, .category-card, .client-logo {
+    border: 1px solid var(--dark-color);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.job-info {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.job-card-body h3 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.job-card-body p {
+    font-size: 14px;
+    color: var(--darkgrey-color);
+}
+
+.job-card-body span {
+    font-size: 12px;
+    color: var(--darkgrey-color);
+}
+
+.job-card-footer button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--plane-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-card img, .client-logo img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: var(--accent-color);
+    padding: 2rem 4rem;
+}
+
+footer .footrow1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footRow1Col1 {
+    width: 30%;
+}
+
+footer .footRow1Col2 {
+    width: 65%;
+}
+
+footer h5 {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+footer .socialLinks a {
+    margin-right: 0.5rem;
+}
+
+footer .foot-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer .foot-links2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+    nav .navrow2 {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .job-cards, .category-cards, .client-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footrow1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footRow1Col1, footer .footRow1Col2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .foot-links2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}

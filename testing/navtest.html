@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getmyjobs</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- test links open -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- test link close -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        :root {
+            --primary-color: #1E0342;
+            --accent-color: #E1F7F5;
+            --accent2-color: #0E46A3;
+            --accent3-color: #9AC8CD;
+            --dark-color: #1E1E1E;
+            --negative-color: #FF4E4E;
+            --darkgrey-color: #6F6F6F;
+            --plane-color: #ffffff;
+            --border-shadow: rgba(23, 26, 31, 0.252);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: var(--plane-color);
+        }
+
+        .navrow1 img {
+            width: 150px;
+        }
+
+        .navrow2 ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navrow2 ul li a {
+            color: var(--plane-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navrow2 ul li a.active {
+            color: var(--accent3-color);
+        }
+
+        .navrow3 button {
+            background-color: var(--accent2-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .navrow3 button img {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Responsive CSS */
+        @media (max-width: 1024px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            .navrow2 ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navrow3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navrow3 button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .navrow2,
+            .navrow3 {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger-menu div {
+                width: 30px;
+                height: 3px;
+                background-color: var(--plane-color);
+                margin: 5px;
+            }
+
+            .navrow1 {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navrow1 img {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navrow1">
+            <img src="images/Get_My_Jobs_Logo.png" alt="Getmyjobs logo">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="navrow2">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">About Us</a></li>
+                <li><a href="index.html">Contact Us</a></li>
+                <li><a href="index.html">Our offerings</a></li>
+            </ul>
+        </div>
+        <div class="navrow3">
+            <button>Find jobs <img src="images/Arrow.svg" alt="arrow"></button>
+            <button>Login <img src="images/Arrow.svg" alt="arrow"></button>
+        </div>
+    </nav>
+
+    <main></main>
+
+    <footer></footer>
+
+    <script>
+        function toggleMenu() {
+            const nav2 = document.querySelector('.navrow2');
+            const nav3 = document.querySelector('.navrow3');
+            nav2.style.display = nav2.style.display === 'flex' ? 'none' : 'flex';
+            nav3.style.display = nav3.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+
+</html>

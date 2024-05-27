@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal Homepage</title>
+    <link rel="stylesheet" href="hometest.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navrow1">
+                <img src="images/Get_My_Jobs_Logo.png" alt="Logo">
+            </div>
+            <div class="navrow2">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Offerings</a></li>
+                    <li><a href="#">Find Jobs</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Excelling Beyond and Above</h1>
+            <form class="search-form">
+                <div>
+                    <label for="role">Role</label>
+                    <input list="roles" id="role" name="role">
+                    <datalist id="roles">
+                        <option value="Software Developer">
+                        <option value="Product Manager">
+                        <option value="Data Scientist">
+                        <option value="Designer">
+                        <option value="DevOps Engineer">
+                    </datalist>
+                    <span class="dropdown-icon">&#9662;</span>
+                </div>
+                <div>
+                    <label for="location">Location</label>
+                    <select id="location">
+                        <option value="bengaluru">Bengaluru</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="experience">Experience</label>
+                    <select id="experience">
+                        <option value="2-years">2+ Years</option>
+                    </select>
+                </div>
+                <button type="submit">Search Jobs</button>
+            </form>
+        </section>
+
+        <section class="trending-jobs">
+            <h2>Trending Jobs</h2>
+            <div class="job-cards">
+                <!-- Job cards go here -->
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <img src="images/google-logo.png" alt="Google Logo">
+                        </div>
+                        <div class="job-info">
+                            <span>Full Time</span>
+                            <span>Design</span>
+                        </div>
+                    </div>
+                    <div class="job-card-body">
+                        <h3>Product Designer</h3>
+                        <p>Collaborate with the product, engineering, and customer success teams to conceptualize and
+                            design new features...</p>
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <button>Apply</button>
+                    </div>
+                </div>
+                <!-- Repeat for other job cards -->
+            </div>
+        </section>
+
+        <section class="job-categories">
+            <h2>Most Demanding Job Categories</h2>
+            <div class="category-cards">
+                <!-- Category cards go here -->
+                <div class="category-card">
+                    <img src="images/design-icon.png" alt="Design Icon">
+                    <h3>Design</h3>
+                </div>
+                <!-- Repeat for other category cards -->
+            </div>
+        </section>
+
+        <section class="clients">
+            <h2>Our Clients</h2>
+            <div class="client-logos">
+                <!-- Client logos go here -->
+                <div class="client-logo">
+                    <img src="images/client1-logo.png" alt="Client 1">
+                </div>
+                <!-- Repeat for other client logos -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footrow1">
+            <div class="footRow1Col1">
+                <div class="footr1col1row1">
+                    <img src="images/Get_My_Jobs_Logo.png" alt="Logo">
+                    <p>Excelling Above and Beyond Text regarding website</p>
+                </div>
+                <div class="footr1col1row2">
+                    <h5>Follow Us</h5>
+                    <div class="socialLinks">
+                        <a href="#"><img src="images/facebook-icon.png" alt=""></a>
+                        <a href="#"><img src="images/instagram-icon.png" alt=""></a>
+                        <a href="#"><img src="images/linkedin-icon.png" alt=""></a>
+                        <a href="#"><img src="images/twitter-icon.png" alt=""></a>
+                        <a href="#"><img src="images/youtube-icon.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footRow1Col2">
+                <div class="footr1c2row1">
+                    <div class="footr1c2r1col1">
+                        <h5>Company</h5>
+                        <div class="foot-links">
+                            <a href="#">About Us</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Our offerings</a>
+                            <a href="#">Community</a>
+                        </div>
+                    </div>
+                    <div class="footr1c2r1col2">
+                        <h5>Support</h5>
+                        <div class="foot-links">
+                            <a href="#">Help Center</a>
+                            <a href="#">Feedback</a>
+                        </div>
+                    </div>
+                    <div class="footr1c2r1col3">
+                        <h5>Links</h5>
+                        <div class="foot-links">
+                            <a href="#">Home</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Place holder</a>
+                            <a href="#">Place holder</a>
+                        </div>
+                    </div>
+                    <div class="footr1c2r1col4">
+                        <h5>Contact Us</h5>
+                        <div class="foot-links">
+                            <a href="tel:+919876543201"><img src="images/phone-icon.png" alt=""> (+91) 9876 543 201</a>
+                            <a href="mailto:getmyjob@gmail.com"><img src="images/email-icon.png" alt="">
+                                getmyjob@gmail.com</a>
+                            <a href="#"><img src="images/location-icon.png" alt=""> HSR, Bengaluru, Karnataka, India</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footrow2">
+            <div class="footRow2Col1">
+                Copyright by Getmyjobs.in. All rights reserved.
+            </div>
+            <div class="footRow2Col2">
+                <div class="foot-links2">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
