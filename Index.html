@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getmyjobs</title>
-    
+
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- <link rel="stylesheet" href="css/navbar.css"> -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,6 +22,8 @@
         rel="stylesheet">
     <!-- test link close -->
 
+    <script defer src="script.js"></script>
+
 </head>
 
 <body>
@@ -32,7 +34,7 @@
             </div>
             <div class="navr1col2">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Our offerings</a></li>
@@ -47,31 +49,350 @@
     </nav>
 
     <main>
-        <section class="HeroSection">
-            <div class="heroSectionRow1">
-                <div class="heroSectionR1col1">
+        <section class="heroSection hidden">
+            <div class="heroSectionRow1 delay hidden">
+                <div class="heroSectionR1col1 delay hidden">
                     <h1 class="epilogue"><span>Excel</span>lening Beyond</h1>
                     <h1 class="epilogue">And <span>Above</span></h1>
                 </div>
-                <div class="heroSectionR1col1"></div>
+                <div class="heroSectionR1col2 delay">
+                    <img src="images/heroSectionImg.svg" alt="">
+                </div>
             </div>
-            <div class="heroSectionRow2">
+            <div class="heroSectionRow2 delay">
+                <form action="">
+                    <div class="searchCol1">
+                        <label for="roles">Role</label>
+                        <div class="input-wrapper">
+                            <input list="roles" id="role" name="role" type="text" placeholder="Software developer">
+                            <datalist id="roles">
+                                <option value="Software Developer">
+                                <option value="Product Manager">
+                                <option value="Data Scientist">
+                                <option value="Designer">
+                                <option value="DevOps Engineer">
+                            </datalist>
+                            <span class="dropdown-icon">&#9662;</span>
+                        </div>
+                    </div>
 
+                    <div class="vLine"></div>
+
+                    <div class="searchCol2">
+                        <label for="location">Location</label>
+                        <div class="input-wrapper">
+                            <input list="locations" id="location" name="location" type="text" placeholder="Bengaluru">
+                            <datalist id="locations">
+                                <option value="Bengaluru">
+                                <option value="Mumbai">
+                                <option value="Pune">
+                                <option value="Delhi">
+                                <option value="Chennai">
+                            </datalist>
+                            <span class="dropdown-icon">&#9662;</span>
+                        </div>
+                    </div>
+
+                    <div class="vLine"></div>
+
+                    <div class="searchCol3">
+                        <label for="experiences">Experience</label>
+                        <div class="input-wrapper">
+                            <input list="expereiences" id="expereience" name="expereience" type="text"
+                                placeholder="Fresher">
+                            <datalist id="expereiences">
+                                <option value="Fresher">
+                                <option value="1 years">
+                                <option value="2 years">
+                                <option value="3 years">
+                                <option value="4 years">
+                            </datalist>
+                            <span class="dropdown-icon">&#9662;</span>
+                        </div>
+                    </div>
+                    <div class="searchCol4">
+                        <button onclick="search()">Search jobs</button>
+                    </div>
+                </form>
             </div>
         </section>
-        <section class="trendingJobs">
+        <section class="trendingJobs hidden">
+            <div class="trendingJobsRow1">
+                <h1 class="epilogue">Trending Jobs</h1>
+            </div>
+            <div class="trendingJobsRow2">
+                <div class="jobCards">
+                    <div class="jobCard">
+                        <div class="cardRow1">
+                            <div class="jobCompanyImg">
+                                <img src="images/Google.png" alt="">
+                            </div>
 
+                            <div class="tags">
+                                <p class="highlight">Design</p>
+                                <p class="highlight">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="cardRow2">
+                            <p class="comapnyName">Google</p>
+                            <p class="dateUploaded">30 days ago</p>
+                        </div>
+                        <div class="cardRow3">
+                            <h2>Product designer</h2>
+                        </div>
+                        <div class="cardRow4">
+                            <p class="briefDesc">Collaborate with the product, engineering, and customer success teams
+                                to conceptualize and design new features, like building a chat between retirees and
+                                recruiters, etc.</p>
+                        </div>
+                        <div class="cardRow5">
+                            <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                            <p class="jobLocation">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="cardRow6">
+                            <Button class="applyJobBtn">Apply</Button>
+                            <Button class="saveJobBtn" id="saveBtn" onclick="changeImg(this)"><img id="saveImg"
+                                    src="images/BookmarkEmpty.svg" alt=""></Button>
+                        </div>
+                    </div>
+                    <div class="jobCard">
+                        <div class="cardRow1">
+                            <div class="jobCompanyImg">
+                                <img src="images/Google.png" alt="">
+                            </div>
+
+                            <div class="tags">
+                                <p class="highlight">Design</p>
+                                <p class="highlight">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="cardRow2">
+                            <p class="comapnyName">Google</p>
+                            <p class="dateUploaded">30 days ago</p>
+                        </div>
+                        <div class="cardRow3">
+                            <h2>Product designer</h2>
+                        </div>
+                        <div class="cardRow4">
+                            <p class="briefDesc">Collaborate with the product, engineering, and customer success teams
+                                to conceptualize and design new features, like building a chat between retirees and
+                                recruiters, etc.</p>
+                        </div>
+                        <div class="cardRow5">
+                            <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                            <p class="jobLocation">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="cardRow6">
+                            <Button class="applyJobBtn">Apply</Button>
+                            <Button class="saveJobBtn" id="saveBtn" onclick="changeImg(this)"><img id="saveImg"
+                                    src="images/BookmarkEmpty.svg" alt=""></Button>
+                        </div>
+                    </div>
+                    <div class="jobCard">
+                        <div class="cardRow1">
+                            <div class="jobCompanyImg">
+                                <img src="images/Google.png" alt="">
+                            </div>
+
+                            <div class="tags">
+                                <p class="highlight">Design</p>
+                                <p class="highlight">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="cardRow2">
+                            <p class="comapnyName">Google</p>
+                            <p class="dateUploaded">30 days ago</p>
+                        </div>
+                        <div class="cardRow3">
+                            <h2>Product designer</h2>
+                        </div>
+                        <div class="cardRow4">
+                            <p class="briefDesc">Collaborate with the product, engineering, and customer success teams
+                                to conceptualize and design new features, like building a chat between retirees and
+                                recruiters, etc.</p>
+                        </div>
+                        <div class="cardRow5">
+                            <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                            <p class="jobLocation">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="cardRow6">
+                            <Button class="applyJobBtn">Apply</Button>
+                            <Button class="saveJobBtn" id="saveBtn" onclick="changeImg(this)"><img id="saveImg"
+                                    src="images/BookmarkEmpty.svg" alt=""></Button>
+                        </div>
+                    </div>
+                    <div class="jobCard">
+                        <div class="cardRow1">
+                            <div class="jobCompanyImg">
+                                <img src="images/Google.png" alt="">
+                            </div>
+
+                            <div class="tags">
+                                <p class="highlight">Design</p>
+                                <p class="highlight">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="cardRow2">
+                            <p class="comapnyName">Google</p>
+                            <p class="dateUploaded">30 days ago</p>
+                        </div>
+                        <div class="cardRow3">
+                            <h2>Product designer</h2>
+                        </div>
+                        <div class="cardRow4">
+                            <p class="briefDesc">Collaborate with the product, engineering, and customer success teams
+                                to conceptualize and design new features, like building a chat between retirees and
+                                recruiters, etc.</p>
+                        </div>
+                        <div class="cardRow5">
+                            <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                            <p class="jobLocation">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="cardRow6">
+                            <Button class="applyJobBtn">Apply</Button>
+                            <Button class="saveJobBtn" id="saveBtn" onclick="changeImg(this)"><img id="saveImg"
+                                    src="images/BookmarkEmpty.svg" alt=""></Button>
+                        </div>
+                    </div>
+                    <div class="jobCard">
+                        <div class="cardRow1">
+                            <div class="jobCompanyImg">
+                                <img src="images/Google.png" alt="">
+                            </div>
+
+                            <div class="tags">
+                                <p class="highlight">Design</p>
+                                <p class="highlight">Full Time</p>
+                            </div>
+                        </div>
+                        <div class="cardRow2">
+                            <p class="comapnyName">Google</p>
+                            <p class="dateUploaded">30 days ago</p>
+                        </div>
+                        <div class="cardRow3">
+                            <h2>Product designer</h2>
+                        </div>
+                        <div class="cardRow4">
+                            <p class="briefDesc">Collaborate with the product, engineering, and customer success teams
+                                to conceptualize and design new features, like building a chat between retirees and
+                                recruiters, etc.</p>
+                        </div>
+                        <div class="cardRow5">
+                            <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                            <p class="jobLocation">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="cardRow6">
+                            <Button class="applyJobBtn">Apply</Button>
+                            <Button class="saveJobBtn" id="saveBtn" onclick="changeImg(this)"><img id="saveImg"
+                                    src="images/BookmarkEmpty.svg" alt=""></Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <section class="mostDemandingJobs">
-
+            <div class="demandingJobsRow1">
+                <h1 class="epilogue">Most demanding Jobs</h1>
+            </div>
         </section>
+
         <section class="clients">
+
+            <div class="clientsRow1">
+                <h1 class="epilogue">Our Clients</h1>
+            </div>
+
+            <div class="slider">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="images/ClientImages/ACCOTAX.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/AVR.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Boxmuse.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Centromotion-1.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Chrodhospital.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Confluenceciruits.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/GIVA.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Hammersandnails.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/Talloaks.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/TOIT.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/ClientImages/WL.png" alt="">
+                    </div>
+                </div>
+            </div>
 
         </section>
     </main>
 
     <footer>
-
+        <div class="footRow1">
+            <div class="footR1col1">
+                <div class="footR1C1row1">
+                    <img src="images/Get_My_Jobs_Logo.png" alt="">
+                </div>
+                <div class="footR1C1row2"></div>
+                <div class="footR1C1row3"></div>
+                <div class="footR1C1row4"></div>
+            </div>
+            <div class="footR1col2">
+                <div class="footR1C2row1">
+                    <div class="footR1C2R1col1">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footR1C2R1col2">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help center</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="footR1C2R1col3">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="#">placeholder</a></li>
+                            <li><a href="#">placeholder</a></li>
+                            <li><a href="#">placeholder</a></li>
+                            <li><a href="#">placeholder</a></li>
+                        </ul>
+                    </div>
+                    <div class="footR1C2R1col4">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li><img src="images/phone--android-phone-mobile-device-smartphone-iphone.svg" alt=""><a href="#">(+91) 8976 402 313</a></li>
+                            <li><img src="images/mail-send-envelope--envelope-email-message-unopened-sealed-close.svg" alt=""><a href="#">Support@mail.com</a></li>
+                            <li><img src="images/location-tick.svg" alt=""><a href="#">HSR Layout, Bengaluru, Karnataka</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footRow2"></div>
     </footer>
 
 </body>
