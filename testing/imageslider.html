@@ -12,122 +12,72 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        h2 {
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Slider */
-
-        .slick-slide {
-            margin: 0px 20px;
-        }
-
-        .slick-slide img {
-            width: 100%;
-        }
-
-        .slick-slider {
-            position: relative;
-            display: block;
-            box-sizing: border-box;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-            -khtml-user-select: none;
-            -ms-touch-action: pan-y;
-            touch-action: pan-y;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .slick-list {
-            position: relative;
-            display: block;
-            overflow: hidden;
+        body {
             margin: 0;
             padding: 0;
         }
 
-        .slick-list:focus {
-            outline: none;
-        }
-
-        .slick-list.dragging {
-            cursor: pointer;
-            cursor: hand;
-        }
-
-        .slick-slider .slick-track,
-        .slick-slider .slick-list {
-            -webkit-transform: translate3d(0, 0, 0);
-            -moz-transform: translate3d(0, 0, 0);
-            -ms-transform: translate3d(0, 0, 0);
-            -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-        }
-
-        .slick-track {
-            position: relative;
+        button {
+            position: absolute;
             top: 0;
             left: 0;
+            z-index: 1;
+        }
+
+        img {
             display: block;
+            width: 100%;
         }
 
-        .slick-track:before,
-        .slick-track:after {
-            display: table;
-            content: '';
+        section {
+            width: 100%;
+            overflow: hidden;
         }
 
-        .slick-track:after {
-            clear: both;
+        article {
+            display: flex;
+            width: 200%;
+            animation: bannermove 20s linear infinite;
         }
 
-        .slick-loading .slick-track {
-            visibility: hidden;
+        article.paused {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
         }
 
-        .slick-slide {
-            display: none;
-            float: left;
-            height: 100%;
-            min-height: 1px;
+        div {
+            width: 100%;
         }
 
-        [dir='rtl'] .slick-slide {
-            float: right;
+        ul {
+            display: flex;
+            gap: 10px;
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
         }
 
-        .slick-slide img {
-            display: block;
+        li {
+            width: 100%;
+            background: blue;
         }
 
-        .slick-slide.slick-loading img {
-            display: none;
+        li:nth-child(2) {
+            background: green;
         }
 
-        .slick-slide.dragging img {
-            pointer-events: none;
+        li:nth-child(3) {
+            background: yellow;
         }
 
-        .slick-initialized .slick-slide {
-            display: block;
-        }
+        @keyframes bannermove {
+            0% {
+                transform: translateX(0);
+            }
 
-        .slick-loading .slick-slide {
-            visibility: hidden;
-        }
-
-        .slick-vertical .slick-slide {
-            display: block;
-            height: auto;
-            border: 1px solid transparent;
-        }
-
-        .slick-arrow.slick-hidden {
-            display: none;
+            100% {
+                transform: translateX(-50%);
+            }
         }
     </style>
 
@@ -155,7 +105,7 @@
 
             </section> -->
 
-            <section class="customer-logos slider">
+            <!-- <section class="customer-logos slider">
                 <div class="slide"><img src="images/ClientImages/ACCOTAX.webp"></div>
                 <div class="slide"><img src="images/ClientImages/AVR.png"></div>
                 <div class="slide"><img src="images/ClientImages/Boxmuse.webp"></div>
@@ -164,32 +114,58 @@
                 <div class="slide"><img src="images/ClientImages/GIVA.webp"></div>
                 <div class="slide"><img src="images/ClientImages/WL.png"></div>
 
+            </section> -->
+
+            <section>
+                <!-- <button>Pause</button> -->
+                <article>
+                    <div>
+                        <ul>
+                            <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/000000/ffffff.png" /></li>
+                            <li><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" /></li>
+                        </ul>
+                    </div>
+                </article>
             </section>
         </div>
     </main>
 
     <script>
-        $(document).ready(function () {
-            $('.customer-logos').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 4
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                }]
-            });
+        // $(document).ready(function () {
+        //     $('.customer-logos').slick({
+        //         slidesToShow: 6,
+        //         slidesToScroll: 1,
+        //         autoplay: true,
+        //         autoplaySpeed: 1500,
+        //         arrows: false,
+        //         dots: false,
+        //         pauseOnHover: false,
+        //         responsive: [{
+        //             breakpoint: 768,
+        //             settings: {
+        //                 slidesToShow: 4
+        //             }
+        //         }, {
+        //             breakpoint: 520,
+        //             settings: {
+        //                 slidesToShow: 3
+        //             }
+        //         }]
+        //     });
+        // });
+
+        $('button').click(function () {
+            $("article").toggleClass("paused")
         });
     </script>
 </body>
