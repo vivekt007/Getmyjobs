@@ -30,7 +30,7 @@
 
 main {
     position: relative;
-    padding: 10vh 0;
+    padding: 15vh 0 10vh 0;
 }
 
 main::before {
