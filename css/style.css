@@ -157,7 +157,7 @@ main section {
     justify-content: center;
     align-items: center;
     padding: 3rem 8rem;
-    background: url(../images/Herobg.png);
+    background: url(/images/Herobg.png);
     background-repeat: no-repeat;
 }
 
