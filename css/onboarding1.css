@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    color: var(--textcolor);
+    font-family: 'Roboto', monospace;
+}
+
+:root {
+    --primary-color: #1E0342;
+    --accent-color: #E1F7F5;
+    --accent2-color: #0E46A3;
+    --accent3-color: #9AC8CD;
+    --dark-color: #1E1E1E;
+    --negative-color: #FF4E4E;
+    --darkgrey-color: #6F6F6F;
+    --textfieldgray-color: #F5F5F5;
+    --plane-color: #ffffff;
+    --border-shadow: rgba(23, 26, 31, 0.252);
+    --font-family: 'Epilogue', sans-serif;
+}
+
+.epilogue {
+    font-family: var(--font-family);
+}
+
+.purposeRow1{
+    display: flex;
+    width: 100%;
+}
+
+.purposeRow1col1{
+    width: 50%;
+}
+
+.purposeRow1col2{
+    padding: 0rem 4rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--plane-color);
+}
+
+.purposeR1C2Row1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.back{
+    font-size: 18px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.back span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back span img{
+    width: 20px;
+}
+
+.onboaringCompanyLogo2{
+    opacity: 0;
+}
+
+.purposeR1C2Row2 p{
+    color: var(--darkgrey-color);
+    font-size: 12px;
+}
+
+.purposeR1C2Row2 h1{
+    font-size: 36px;
+}
+
+.purposeR1C2Row3{
+    width: 100%;
+}
+
+.hiddenradio{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hiddenradio label{
+    width: 40%;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.hiddenradio [type=radio] {
+    opacity: 0;
+    width: 50%;
+    text-align: center;
+}
+
+article{
+    text-align: center;
+}
+
+.hiddenradio [type=radio]+img {
+    cursor: pointer;
+}
+
+.hiddenradio [type=radio]:checked+article {
+    /* outline: 2px solid #f00; */
+    transition: 0.3s;
+    border: 1px solid var(--dark-color);
+    box-shadow: 0 4px 2px var(--dark-color);
+    
+}

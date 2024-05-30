@@ -43,8 +43,6 @@
     padding: 4px;
 }
 
-main {}
-
 .aboutOurCompany {
     background: url('../images/aboutUsBG.svg');
     background-repeat: no-repeat;
@@ -188,4 +186,10 @@ main {}
 .teamember p {
     font-size: 12px;
     text-align: center;
+}
+
+@media screen and (max-width: 1200px){
+    .aboutOurCompany {
+        padding: 15vh 3rem 10vh 3rem;
+    }
 }

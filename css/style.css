@@ -141,7 +141,27 @@ nav {
 }
 
 .delay:nth-child(2) {
-    transition-delay: 100ms;
+    transition-delay: 200ms;
+}
+
+.delay:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.delay:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.delay:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.delay:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
+.delay:nth-child(7) {
+    transition-delay: 1200ms;
 }
 
 main section {
@@ -157,7 +177,7 @@ main section {
     justify-content: center;
     align-items: center;
     padding: 3rem 8rem;
-    background: url(images/Herobg.png);
+    background: url('../images/Herobg.png');
     background-repeat: no-repeat;
 }
 

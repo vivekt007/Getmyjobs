@@ -30,6 +30,10 @@
 
 /* form css start */
 
+main {
+    padding: 15vh 0rem;
+}
+
 form {
     width: 100%;
     padding: 1vw 10vw;
@@ -86,9 +90,9 @@ form h1 {
     gap: 4px;
 }
 
-label {
+form label {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 label>span {
@@ -109,7 +113,7 @@ textarea {
 input:focus,
 textarea:focus {
     border: 1px solid var(--dark-color);
-    border-color: var(--plane-color);
+    /* border-color: var(--plane-color); */
     box-shadow: 0 4px 2px var(--dark-color);
 }
 
@@ -181,7 +185,7 @@ textarea {
 
 .formblock h2 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     font-family: 'Roboto';
 }
 
