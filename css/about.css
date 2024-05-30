@@ -188,8 +188,8 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
     .aboutOurCompany {
-        padding: 15vh 3rem 10vh 3rem;
+        padding: 15vh 1rem 10vh 1rem;
     }
 }
