@@ -97,9 +97,13 @@
 }
 
 .hiddenradio label{
-    width: 40%;
-    height: fit-content;
-    padding: 2rem;
+    width: 35%;
+    border-radius: 8px;
+    /* padding: 2rem 0; */
+}
+
+.hiddenradio label img{
+    width: 200px;
 }
 
 .hiddenradio [type=radio] {
@@ -121,5 +125,6 @@ article{
     transition: 0.3s;
     border: 1px solid var(--dark-color);
     box-shadow: 0 4px 2px var(--dark-color);
+    border-radius: 8px;
     
 }

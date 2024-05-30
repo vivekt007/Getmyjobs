@@ -147,7 +147,7 @@
     font-size: 14px;
 }
 
-.ourTeam{
+.ourTeam {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,7 +188,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1400px) {
     .aboutOurCompany {
         padding: 15vh 3rem 10vh 3rem;
     }
