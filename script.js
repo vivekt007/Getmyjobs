@@ -57,5 +57,5 @@ function changeImg(button) {
 }
 
 function Signin() {
-    window.location.href = 'onboarding1.html';
+    window.location.href = 'login.html';
 }

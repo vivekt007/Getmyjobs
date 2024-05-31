@@ -7,7 +7,7 @@
     <title>Onboarding</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/createaccount.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <!-- test links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,15 +24,17 @@
 
 <body>
     <main>
-        <div class="createaccount">
-            <div class="createaccountRow1">
-                <div class="caRow1col1">
+        <div class="login">
+            <div class="loginRow1">
+
+                <div class="loginR1col1">
                     <img src="images/placeholder-bg.png" alt="">
                 </div>
-                <div class="caRow1col2">
-                    <div class="caR1C2Row1">
-                        <div class="back"><span><img src="images/arrow-left.svg" alt=""></span><a
-                                href="index.html">Back</a>
+                <div class="loginR1col2">
+                    <div class="loginR1C2row1">
+                        <div class="back">
+                            <span><img src="images/arrow-left.svg" alt=""></span>
+                            <a href="index.html">Back</a>
                         </div>
                         <div class="onboaringCompanyLogo">
                             <img src="images/Get_My_Jobs_Logo.png" alt="">
@@ -41,41 +43,32 @@
                             <img src="images/Get_My_Jobs_Logo.png" alt="">
                         </div>
                     </div>
-                    <div class="caR1C2Row2">
-                        <h1 class="epilogue">Create new account</h1>
-                        <p>Please enter your details</p>
+
+                    <div class="loginR1C2row2">
+                        <h1 class="epilogue">Login to your account</h1>
+                        <p>Welcome back</p>
                     </div>
-                    <div class="caR1C2Row3">
+
+                    <div class="loginR1C2row3">
                         <form action="">
-                            <div class="caformRow caformRowFields">
-                                <label for="fullName">Full name</label>
-                                <input type="text" name="fullName" id="fullName" placeholder="Enter your full name">
-                            </div>
-                            <div class="caformRow caformRowFields">
+                            <div class="loginformRow loginformRowFields">
                                 <label for="emailId">Email Id</label>
-                                <input type="text" name="emailId" id="emailId" placeholder="Enter your emailId">
+                                <input type="text" name="emailId" id="emailId" placeholder="Enter your Email Id">
                             </div>
-                            <div class="caformRow caformRowFields">
+
+                            <div class="loginformRow loginformRowFields">
                                 <label for="password">Password</label>
                                 <input type="text" name="password" id="password" placeholder="Enter your password">
+                                <a href="#">forgot password?</a>
                                 <!-- <span class="toggle-password" onclick="togglePasswordVisibility('password')">👁️</span> -->
                             </div>
-                            <div class="caformRow caformRowFields">
-                                <label for="confirmPassword">Confirm Password</label>
-                                <input type="text" name="confirmPassword" id="confirmPassword" placeholder="Re-enter your Password">
-                            </div>
-                            <div class="caformRow termsAndConditions">
-                                <input type="checkbox" name="termsAndConditions" id="termsAndConditions">
-                                <p>By signing up you agree to our <a href="">Teams and Services</a>.</p>
-                            </div>
 
-                            <input type="submit" value="Create Account">
+                            <input type="submit" value="Login">
                         </form>
-
-                        
                     </div>
-                    <p class="login">already have an account? <a href="login.html">Login</a></p>
+                    <p class="newAccount">Don't have an account? <a href="onboarding1.html">Create new account</a></p>
                 </div>
+
             </div>
         </div>
     </main>

@@ -28,37 +28,37 @@
     font-family: 'Epilogue';
 }
 
-.createaccount {
+.login {
     width: 100%;
 }
 
-.login{
+.newAccount{
     text-align: center;
     font-size: 14px;
 }
 
-.login a{
+.newAccount a{
     font-weight: 500;
     color: var(--accent2-color);
 }
 
-.createaccountRow1 {
+.loginRow1 {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.caRow1col1 {
+.loginR1col1 {
     width: 50%;
 }
 
-.caRow1col1 img {
+.loginR1col1 img {
     height: 100dvh;
     width: 100%;
 }
 
-.caRow1col2 {
+.loginR1col2 {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@
     gap: 2rem;
 }
 
-.caR1C2Row1 {
+.loginR1C2row1 {
     width: 100%;
     display: flex;
     align-items: center;
@@ -95,40 +95,40 @@
     opacity: 0;
 }
 
-.caR1C2Row2 {
+.loginR1C2row2 {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.caR1C2Row2 h1 {
+.loginR1C2row2 h1 {
     font-size: 36px;
 }
 
-.caR1C2Row2 p {
+.loginR1C2row2 p {
     font-size: 14px;
     color: var(--darkgrey-color);
     /* font-weight: 500; */
 }
 
-.caR1C2Row3 form {
+.loginR1C2row3 form {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.caformRow {
+.loginformRow {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.caformRow label {
+.loginformRow label {
     font-size: 18px;
     font-weight: 500;
 }
 
-.caformRow input[type="text"] {
+.loginformRow input[type="text"] {
     width: 100%;
     height: 50px;
     font-size: 14px;
@@ -151,9 +151,10 @@ input:focus {
     font-size: 12px;
 }
 
-.termsAndConditions a {
+.loginformRow a {
+    font-size: 14px;
     color: var(--dark-color);
-    font-weight: 500;
+    font-weight: 400;
     color: var(--accent2-color);
 }
 
@@ -183,14 +184,13 @@ input[type="submit"]:hover {
         height: 100dvh;
     }
 
-    .createaccountRow1 {
+    .loginRow1 {
         display: flex;
         align-items: center;
         justify-content: center;
         height: fit-content;
         width: 100%;
     }
-
     
     .onboaringCompanyLogo img{
         width: 100px;
@@ -200,11 +200,11 @@ input[type="submit"]:hover {
         display: none;
     }
 
-    .caRow1col1 {
+    .loginR1col1 {
         display: none;
     }
 
-    .caRow1col2 {
+    .loginR1col2 {
         width: 100%;
         padding: 1rem 2rem;
     }
