@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd; 
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group h3 {
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    border-color: #141313;
+    
+}
+
+.filter-buttons button {
+    width: 55px;
+    height: 28px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 5px;
+    background-color: #f3f8fd;
+    color: #141313;
+    cursor: pointer;
+    gap: 10px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.search-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-controls h1 {
+    margin: 0;
+}
+
+.sort-controls {
+    display: flex;
+    align-items: center;
+}
+
+.sort-controls span {
+    margin-right: 10px;
+}
+
+.job-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Fix 4 job cards horizontally */
+    gap: 20px;
+}
+
+.job-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px; /* Make the job card smaller */
+    background-color: #fff;
+    box-shadow: 0 4px 2px var(--dark-color);
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 2px var(--dark-color);
+}
+
+.job-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.job-type, .job-category {
+    background-color: #e0ffe0;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.job-category {
+    background-color: #e0f7ff;
+}
+
+.job-body h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.job-body h2 {
+    margin: 5px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.job-body p {
+    font-size: 10px;
+    color: #777;
+}
+
+/* Adjust the job-footer to be a column layout */
+.job-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.action img {
+    margin-top: 0px;
+}
+
+/* Style the action span */
+.action span {
+    position: relative;
+    top: -1px; /* Adjust this value as needed */
+    font-size: 10px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Style the job-actions */
+.job-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+}
+
+.job-actions img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.job-actions button {
+    width: 176px;
+    height: 34px;
+    padding: 8px 0px 8px 8px; /* Adjusted padding */
+    box-shadow: 0 4px 2px var(--dark-color);
+    background-color: #0E46A3;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}

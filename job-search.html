@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Jobs</title>
+    <link rel="stylesheet" href="css/job-search.css">
+</head>
+
+<body>
+    <header>
+        <div class="filters">
+            <div class="filter-group">
+                <h3>Job type</h3>
+                <label><input type="checkbox" checked> Full time</label>
+                <label><input type="checkbox" checked> Part time</label>
+                <label><input type="checkbox" checked> Internship</label>
+                <label><input type="checkbox" checked> Freelance</label>
+                <label><input type="checkbox" checked> C2H</label>
+            </div>
+            <div class="filter-group">
+                <h3>Mode of work</h3>
+                <label><input type="checkbox" checked> In-Office</label>
+                <label><input type="checkbox" checked> Hybrid</label>
+                <label><input type="checkbox" checked> Remote</label>
+            </div>
+            <div class="filter-group">
+                <h3>Timings</h3>
+                <label><input type="checkbox" checked> Morning</label>
+                <label><input type="checkbox" checked> Evening</label>
+                <label><input type="checkbox" checked> Night</label>
+                <label><input type="checkbox" checked> Variable</label>
+            </div>
+            <div class="filter-buttons">
+                <button>Save</button>
+                <button>Reset</button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="input-container">
+            <div class="job-input">
+                <div class="label-icon">
+                    <img src="images/search-icon.svg" alt="">
+                    <label for="role">Role </label>
+                </div>
+                <input type="text" id="role" placeholder="Eg: Python developer" required />
+            </div>
+            <div class="side-border"></div>
+            <div class="job-input">
+                <div class="label-icon">
+                    <img src="images/location-icon-2.svg" alt="">
+                    <label for="location">Location </label>
+                </div>
+                <input type="text" id="location" placeholder="Eg: New York" />
+            </div>
+            <div class="side-border"></div>
+            <div class="job-input">
+                <div class="label-icon">
+                    <img src="images/experience-icon.svg" alt="">
+                    <label for="experience">Experience </label>
+                </div>
+                <input type="text" id="experience" placeholder="Eg: 5 years" />
+            </div>
+            <div class="side-border"></div>
+            <div class="job-input">
+                <div class="label-icon">
+                    <img src="images/salary-icon.svg" alt="">
+                    <label for="salary">Salary Range </label>
+                </div>
+                <input type="text" id="salary" placeholder="Eg: 60,000 - 80,000" />
+            </div>
+            <button class="search-btn">Search jobs</button>
+        </div>
+
+        <div class="search-controls">
+            <h1>Available Jobs</h1>
+            <div class="sort-controls">
+                <span>Sort by: </span>
+                <select>
+                    <option>Recent</option>
+                    <option>Relevant</option>
+                </select>
+            </div>
+        </div>
+        <div class="job-cards-container">
+            <!-- Repeat this block for each job card -->
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Amazon_icon 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Reliance_Jio_Logo_(October_2015) 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/image 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/image 2.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/adobe-icon-512x512-mmjkitkd 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Reliance_Jio_Logo_(October_2015) 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Reliance_Jio_Logo_(October_2015) 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Reliance_Jio_Logo_(October_2015) 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Amazon_icon 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Amazon_icon 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Amazon_icon 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="job-card">
+                <div class="job-header">
+                    <img src="images/Amazon_icon 1.png" alt="Company Logo">
+                    <span class="job-type">Full Time</span>
+                    <span class="job-category">Design</span>
+                </div>
+                <div class="job-body">
+                    <h3>TCS</h3>
+                    <h2>Product Designer</h2>
+                    <p>Collaborate with the product, engineering, and customer success teams to conceptualize and design
+                        new features...</p>
+                </div>
+                <div class="job-footer">
+                    <div class="action">
+                        <img src="images/maps-pin-gps-location.svg" alt="">
+                        <span>Bengaluru, Karnataka, India</span>
+                    </div>
+                    <div class="job-actions">
+                        <img src="images/bookmark--bookmarks-tags-favorite.svg" alt="Save">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more job cards as needed -->
+        </div>
+    </main>
+</body>
+
+</html>
