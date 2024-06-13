@@ -51,14 +51,17 @@
 
 .caRow1col1 {
     width: 50%;
+    height: 100%;
 }
 
 .caRow1col1 img {
     height: 100dvh;
+    /* height: 100%; */
     width: 100%;
 }
 
 .caRow1col2 {
+    height: 100dvh;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -71,6 +74,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* padding: 2rem 0; */
 }
 
 .back {
@@ -102,7 +106,7 @@
 }
 
 .caR1C2Row2 h1 {
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .caR1C2Row2 p {

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Jobs</title>
+    <link rel="stylesheet" href="/css/recruiterMain.css">
+    <script src="script.js"></script>
+
+    <!-- font links open -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- test link close -->
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="overlay" id="myNav">
+            <a class="close-btn" onclick="closeNav()">&times;</a>
+            <div class="logo">
+                <img src="images/Get_My_Jobs_Logo.png" alt="">
+            </div>
+            <div class="overlay-content">
+                <ul>
+                    <li class="active">
+                        <a href="#one" onclick="closeNav()">
+                            <img src="images/Active-Jobs-Filled.svg" alt="">
+                            ActiveJobs</a>
+                    </li>
+                    <li class="inActive">
+                        <a href="#two" onclick="closeNav()">
+                            <img src="images/Inactive.svg" alt="">
+                            In-Active Jobs</a>
+                    </li>
+                    <li class="inActive">
+                        <a href="#three" onclick="closeNav()">
+                            <img src="images/DraftsOutline.svg" alt="">
+                            Drafts</a>
+                    </li>
+                    <li class="inActive">
+                        <a href="#four" onclick="closeNav()">
+                            <img src="images/CandidatesOutline.svg" alt="">
+                            Candidates</a>
+                    </li>
+                    <li class="inActive">
+                        <a href="#four" onclick="closeNav()">
+                            <img src="images/savedCandidatesOutline.svg" alt="">
+                            Candidates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="inActive">
+                        <img src="images/logout-1--arrow-exit-frame-leave-logout-rectangle-right.svg" alt="">
+                        <a href="" onclick="closeNav()">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="navRow1">
+            <span style="font-size: 30pxx; cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+            <h1 class="epilogue">Recruiter Dashboard</h1>
+
+            <div class="recruiterProfile">
+                <div class="nameDesignation">
+                    <h3>Pranav Patil</h3>
+                    <p>Recruitment Specialist</p>
+                </div>
+                <div class="profilepicture">
+                    <img src="images/profilePlaceholder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="one">one</section>
+        <section id="two">two</section>
+        <section id="three">three</section>
+        <section id="four">four</section>
+    </main>
+
+    <article>
+        <div class="carousel">
+            <img src="images/placeholder-1920x1080 potrait.png" alt="">
+        </div>
+    </article>
+
+</body>
+
+</html>
