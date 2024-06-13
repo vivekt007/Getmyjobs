@@ -26,14 +26,16 @@
 
     <nav>
         <div class="overlay" id="myNav">
-            <a class="close-btn" onclick="closeNav()">&times;</a>
+            <div class="close">
+                <a class="close-btn" onclick="closeNav()">&times;</a>
+            </div>
             <div class="logo">
-                <img src="images/Get_My_Jobs_Logo.png" alt="">
+                <img src="images/GetMyJob-logo-light.png" alt="">
             </div>
             <div class="overlay-content">
                 <ul>
                     <li class="active">
-                        <a href="#one" onclick="closeNav()">
+                        <a class="primary-text" href="#one" onclick="closeNav()">
                             <img src="images/Active-Jobs-Filled.svg" alt="">
                             ActiveJobs</a>
                     </li>
@@ -57,11 +59,14 @@
                             <img src="images/savedCandidatesOutline.svg" alt="">
                             Candidates</a>
                     </li>
-                </ul>
-                <ul>
                     <li class="inActive">
-                        <img src="images/logout-1--arrow-exit-frame-leave-logout-rectangle-right.svg" alt="">
-                        <a href="" onclick="closeNav()">logout</a>
+                        <a href="#four" onclick="closeNav()">
+                            <img src="images/Setting outline.svg" alt="">
+                            Settings</a>
+                    </li>
+                    <li class="inActive">
+                        <a href="" onclick="closeNav()"><img src="images/logout-before.svg" alt="">
+                            logout</a>
                     </li>
                 </ul>
             </div>
