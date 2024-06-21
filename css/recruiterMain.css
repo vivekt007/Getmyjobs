@@ -18,6 +18,7 @@
     --dark-color: #1E1E1E;
     --negative-color: #FF4E4E;
     --darkgrey-color: #6F6F6F;
+    --lightygrey-color: #D9D9D9;
     --textfieldgray-color: #F5F5F5;
     --plane-color: #ffffff;
     --border-shadow: rgba(23, 26, 31, 0.252);
@@ -26,11 +27,6 @@
 
 .epilogue {
     font-family: var(--font-family);
-}
-
-section {
-    height: 100vh;
-    padding: 10px;
 }
 
 article {
@@ -84,14 +80,34 @@ nav span {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px;
+    /* padding: 4px; */
+    /* background-color: #6F6F6F; */
     /* border: 1px solid var(--darkgrey-color); */
     border-radius: 4px;
     gap: 20px;
 }
 
+.recruiterProfile button {
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    /* border: 1px solid var(--darkgrey-color); */
+    /* padding: 4px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#notification {
+    /* width: 18px; */
+}
+
 .recruiterProfile img {
-    width: 50px;
+    width: 20px;
 }
 
 .nameDesignation h3 {
@@ -113,7 +129,7 @@ nav span {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--plane-color);
     overflow-x: hidden;
     transition: 0.5s;
     display: flex;
@@ -121,6 +137,7 @@ nav span {
     align-items: center;
     justify-content: start;
     gap: 1rem;
+    color: var(--dark-color);
 }
 
 .overlay>div {
@@ -131,11 +148,11 @@ nav span {
     display: flex;
     align-items: center;
     justify-content: end;
-    color: var(--plane-color);
+    color: var(--dark-color);
     padding: 0 2rem 0 0;
 }
 
-.close a{
+.close a {
     padding: 4px;
     transition: 200ms;
     border: 1px solid transparent;
@@ -143,7 +160,7 @@ nav span {
 }
 
 .close a:hover {
-    color: var(--accent-color);
+    color: var(--accent2-color);
 }
 
 .logo {
@@ -181,17 +198,17 @@ nav span {
 }
 
 .active {
-    background-color: var(--plane-color);
-    color: var(--dark-color);
+    background-color: var(--primary-color);
+    color: var(--plane-color);
     font-weight: 500;
 }
 
 .primary-text {
-    color: var(--primary-color);
+    color: var(--plane-color);
 }
 
 .inActive {
-    color: var(--plane-color);
+    color: var(--dark-color);
 }
 
 .overlay-content>ul>li>a {
@@ -209,14 +226,191 @@ nav span {
 }
 
 .overlay-content ul li:hover {
-    border: 1px solid var(--plane-color);
+    border: 1px solid var(--dark-color);
 }
 
 .overlay .close-btn {
-    /* position: absolute; */
-    /* top: 20px; */
-    /* right: 45px; */
     font-size: 40px;
+}
+
+main {
+    padding: 5rem 2rem;
+}
+
+.activejobsContainer {
+    width: 100%;
+}
+
+.activeJobRow1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 73dvw;
+    height: 10dvh;
+    background-color: var(--plane-color);
+}
+
+.activeJobRow1 p {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.navActions{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: end;
+}
+
+.sort-container label {
+    font-size: 14px;
+    color: var(--darkgrey-color);
+}
+
+.sort-container select {
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    color: var(--dark-color);
+    background-color: var(--plane-color);
+    font-size: 14px;
+    outline: none;
+}
+
+.searchbar input[type="search"] {
+    border: 1px solid var(--darkgrey-color);
+    background-color: var(--textfieldgray-color);
+    height: 32px;
+    border-radius: 4px;
+}
+
+.searchbar input[type="button"] {
+    outline: none;
+    border: 1px solid var(--dark-color);
+    padding: 4px 12px;
+    height: 32px;
+    color: var(--dark-color);
+    border-radius: 4px;
+    background-color: var(--plane-color);
+    transition: 200ms;
+}
+
+.searchbar input[type="button"]:hover {
+    background-color: var(--primary-color);
+    color: var(--plane-color);
+}
+
+.newJobPost button {
+    height: 32px;
+    padding: 4px 12px;
+    border: 1px solid var(--accent2-color);
+    background-color: var(--accent2-color);
+    color: var(--plane-color);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 300ms;
+}
+
+.newJobPost button:hover {
+    background-color: var(--primary-color);
+}
+
+
+/* job list */
+
+.activeJobRow2{
+    width: 73dvw;
+}
+
+.jobcard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--lightygrey-color);
+    padding: 1rem 0;
+}
+
+.jobcardCol1 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.jcC1Col1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jcC1Col1 img{
+    width: 40px;
+}
+
+.jcC1Col2{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.jcC1Col2 h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.jcC1Col2 p{
+    font-size: 12px;
+    color: var(--darkgrey-color);
+}
+
+.jcC1Col2 span{
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.jobcardCol2 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jobTag {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px;
+    background-color: #F3F8FF;
+    border-radius: 4px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.jobTag img {
+    width: 14px;
+}
+
+.jobcardCol3 {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.jobcardCol3 button {
+    border: none;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
 }
 
 @media screen and (max-height:450px) {

@@ -35,12 +35,12 @@
             <div class="overlay-content">
                 <ul>
                     <li class="active">
-                        <a class="primary-text" href="#one" onclick="closeNav()">
+                        <a class="primary-text" href="recruiterActiveJobs.html" onclick="closeNav()">
                             <img src="images/Active-Jobs-Filled.svg" alt="">
                             ActiveJobs</a>
                     </li>
                     <li class="inActive">
-                        <a href="#two" onclick="closeNav()">
+                        <a href="inActiveJobs.html" onclick="closeNav()">
                             <img src="images/Inactive.svg" alt="">
                             In-Active Jobs</a>
                     </li>
@@ -57,7 +57,7 @@
                     <li class="inActive">
                         <a href="#four" onclick="closeNav()">
                             <img src="images/savedCandidatesOutline.svg" alt="">
-                            Candidates</a>
+                            Saved Candidates</a>
                     </li>
                     <li class="inActive">
                         <a href="#four" onclick="closeNav()">
@@ -78,22 +78,151 @@
             <h1 class="epilogue">Recruiter Dashboard</h1>
 
             <div class="recruiterProfile">
-                <div class="nameDesignation">
+                <!-- <div class="nameDesignation">
                     <h3>Pranav Patil</h3>
                     <p>Recruitment Specialist</p>
+                </div> -->
+                <div class="searchbar">
+                    <form action="">
+                        <input type="search" name="" id="">
+                        <input type="button" value="Search">
+                    </form>
                 </div>
                 <div class="profilepicture">
-                    <img src="images/profilePlaceholder.png" alt="">
+                    <button>
+                        <img src="images/profile-outline.svg" alt="">
+                    </button>
+                </div>
+                <div class="notification">
+                    <button><img id="notification" src="images/notification.svg" alt=""></button>
                 </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="one">one</section>
-        <section id="two">two</section>
-        <section id="three">three</section>
-        <section id="four">four</section>
+        <section id="one" class="activejobsContainer">
+            <div class="activeJobRow1">
+                <p><span>9 </span> Active Jobs</p>
+
+                <div class="navActions">
+                    <div class="sort-container">
+                        <label for="sort">Sort by: </label>
+                        <select id="sort" name="sort" onchange="sortPosts()">
+                            <!-- <option value="">Select</option> -->
+                            <option value="latest">Latest</option>
+                            <option value="oldest">Oldest</option>
+                        </select>
+                    </div>
+                    <div class="newJobPost">
+                        <button>+ New Post</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activeJobRow2">
+                <div class="jobList">
+                    <div class="jobcard">
+                        <div class="jobcardCol1">
+                            <div class="jcC1Col1">
+                                <img src="images/Google.png" alt="">
+                            </div>
+                            <div class="jcC1Col2">
+                                <h3>Product designer</h3>
+                                <p>at <span>Google</span> for <span>Design</span></p>
+                            </div>
+                        </div>
+                        <div class="jobcardCol2">
+                            <div class="jobType jobTag">
+                                <img src="images/Jobtype.svg" alt="">
+                                <p>Full Time</p>
+                            </div>
+                            <div class="location jobTag">
+                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                                <p>Bengaluru, Karnataka, India</p>
+                            </div>
+                            <div class="salary jobTag">
+                                <img src="images/Salary.svg" alt="">
+                                <p><span>5</span> LPA</p>
+                            </div>
+                            <div class="jobPosteddate jobTag">
+                                <img src="images/calendar.svg" alt="">
+                                <p>Posted on<span>17 Jun 2024</span></p>
+                            </div>
+
+                        </div>
+                        <div class="jobcardCol3">
+                            <button onclick="">View</button>
+                        </div>
+                    </div>
+                    <div class="jobcard">
+                        <div class="jobcardCol1">
+                            <div class="jcC1Col1">
+                                <img src="images/Google.png" alt="">
+                            </div>
+                            <div class="jcC1Col2">
+                                <h3>Product designer</h3>
+                                <p>at <span>Google</span> for <span>Design</span></p>
+                            </div>
+                        </div>
+                        <div class="jobcardCol2">
+                            <div class="jobType jobTag">
+                                <img src="images/Jobtype.svg" alt="">
+                                <p>Full Time</p>
+                            </div>
+                            <div class="location jobTag">
+                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                                <p>Bengaluru, Karnataka, India</p>
+                            </div>
+                            <div class="salary jobTag">
+                                <img src="images/Salary.svg" alt="">
+                                <p><span>5</span> LPA</p>
+                            </div>
+                            <div class="jobPosteddate jobTag">
+                                <img src="images/calendar.svg" alt="">
+                                <p>Posted on<span>17 Jun 2024</span></p>
+                            </div>
+
+                        </div>
+                        <div class="jobcardCol3">
+                            <button onclick="">View</button>
+                        </div>
+                    </div>
+                    <div class="jobcard">
+                        <div class="jobcardCol1">
+                            <div class="jcC1Col1">
+                                <img src="images/Google.png" alt="">
+                            </div>
+                            <div class="jcC1Col2">
+                                <h3>Product designer</h3>
+                                <p>at <span>Google</span> for <span>Design</span></p>
+                            </div>
+                        </div>
+                        <div class="jobcardCol2">
+                            <div class="jobType jobTag">
+                                <img src="images/Jobtype.svg" alt="">
+                                <p>Full Time</p>
+                            </div>
+                            <div class="location jobTag">
+                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
+                                <p>Bengaluru, Karnataka, India</p>
+                            </div>
+                            <div class="salary jobTag">
+                                <img src="images/Salary.svg" alt="">
+                                <p><span>5</span> LPA</p>
+                            </div>
+                            <div class="jobPosteddate jobTag">
+                                <img src="images/calendar.svg" alt="">
+                                <p>Posted on<span>17 Jun 2024</span></p>
+                            </div>
+
+                        </div>
+                        <div class="jobcardCol3">
+                            <button onclick="">View</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
     </main>
 
     <article>
@@ -101,6 +230,7 @@
             <img src="images/placeholder-1920x1080 potrait.png" alt="">
         </div>
     </article>
+
 
 </body>
 
