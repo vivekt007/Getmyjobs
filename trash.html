@@ -4,175 +4,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trash</title>
-
-    <!-- font links open -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
+    <title>Document</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            list-style-type: none;
-            text-decoration: none;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            scroll-padding-top: 7rem;
-            color: var(--textcolor);
-            font-family: 'Roboto';
+        @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+
+        h2 {
+            /* display: block; */
+            color: black;
+            font-weight: 300;
+            text-align: center;
         }
 
-
-        :root {
-            --primary-color: #1E0342;
-            --accent-color: #E1F7F5;
-            --accent2-color: #0E46A3;
-            --accent3-color: #9AC8CD;
-            --dark-color: #1E1E1E;
-            --negative-color: #FF4E4E;
-            --darkgrey-color: #6F6F6F;
-            --lightygrey-color: #D9D9D9;
-            --textfieldgray-color: #F5F5F5;
-            --plane-color: #ffffff;
-            --border-shadow: rgba(23, 26, 31, 0.252);
-            --font-family: 'Epilogue', sans-serif;
-        }
-
-        main {
-            width: 70dvw;
-            padding: 5rem;
-        }
-
-        .jobcard {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-top: 1px solid var(--lightygrey-color);
-            padding: 1rem 2rem;
-        }
-
-        .jobcardCol1 {
-            width: 30%;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            gap: 8px;
-        }
-
-        .jcC1Col1 img{
-            width: 40px;
-        }
-
-        .jcC1Col2{
+        body {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: "Lato";
+            font-weight: 300;
+            font-size: 24px;
+            /* background: #2b2b2b; */
         }
 
-        .jcC1Col2 h3{
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .jcC1Col2 p{
-            font-size: 12px;
-            color: var(--darkgrey-color);
-        }
-
-        .jcC1Col2 span{
-            color: var(--dark-color);
-            font-weight: 500;
-        }
-
-        .jobcardCol2 {
-            width: 50%;
-            /* display: grid;
-            justify-content: start;
-            grid-template-columns: repeat(3, 1fr); */
+        .mosaic-loader {
+            --cell-size: 64px;
+            --cell-spacing: 1px;
+            --border-width: 1px;
+            --cells: 4;
+            --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            width: var(--total-size);
+            height: var(--total-size);
         }
 
-        .jobTag {
-            display: flex;
-            gap: 8px;
-            padding: 4px 12px;
-            background-color: #F3F8FF;
-            border-radius: 4px;
-            height: fit-content;
-            width: fit-content;
-            font-size: 12px;
+        .mosaic-loader>.cell {
+            --cell-color: white;
+            flex: 0 0 var(--cell-size);
+            margin: var(--cell-spacing);
+            background-color: transparent;
+            box-sizing: border-box;
+            border: var(--border-width) solid var(--cell-color);
+            animation: 1.5s ripple ease infinite;
         }
 
-        .jobTag img {
-            width: 14px;
+        .mosaic-loader>.cell.d-1 {
+            animation-delay: 100ms;
         }
 
-        .jobcardCol3 {
-            width: 10%;
+        .mosaic-loader>.cell.d-2 {
+            animation-delay: 200ms;
         }
 
-        .jobcardCol3 button {
-            border: none;
-            outline: none;
-            width: fit-content;
-            height: fit-content;
-            padding: 8px 16px;
-            border-radius: 4px;
-            background-color: black;
-            color: white;
-            font-size: 16px;
+        .mosaic-loader>.cell.d-3 {
+            animation-delay: 300ms;
+        }
+
+        .mosaic-loader>.cell.d-4 {
+            animation-delay: 400ms;
+        }
+
+        .mosaic-loader>.cell.d-5 {
+            animation-delay: 500ms;
+        }
+
+        .mosaic-loader>.cell.d-6 {
+            animation-delay: 600ms;
+        }
+
+        .mosaic-loader>.cell:nth-child(1) {
+            --cell-color: #d4aee0;
+        }
+
+        .mosaic-loader>.cell:nth-child(2) {
+            --cell-color: #8975b4;
+        }
+
+        .mosaic-loader>.cell:nth-child(3) {
+            --cell-color: #64518a;
+        }
+
+        .mosaic-loader>.cell:nth-child(4) {
+            --cell-color: #565190;
+        }
+
+        .mosaic-loader>.cell:nth-child(5) {
+            --cell-color: #44abac;
+        }
+
+        .mosaic-loader>.cell:nth-child(6) {
+            --cell-color: #2ca7d8;
+        }
+
+        .mosaic-loader>.cell:nth-child(7) {
+            --cell-color: #1482ce;
+        }
+
+        .mosaic-loader>.cell:nth-child(8) {
+            --cell-color: #05597c;
+        }
+
+        .mosaic-loader>.cell:nth-child(9) {
+            --cell-color: #b2dd57;
+        }
+
+        .mosaic-loader>.cell:nth-child(10) {
+            --cell-color: #57c443;
+        }
+
+        .mosaic-loader>.cell:nth-child(11) {
+            --cell-color: #05b853;
+        }
+
+        .mosaic-loader>.cell:nth-child(12) {
+            --cell-color: #19962e;
+        }
+
+        .mosaic-loader>.cell:nth-child(13) {
+            --cell-color: #fdc82e;
+        }
+
+        .mosaic-loader>.cell:nth-child(14) {
+            --cell-color: #fd9c2e;
+        }
+
+        .mosaic-loader>.cell:nth-child(15) {
+            --cell-color: #d5385a;
+        }
+
+        .mosaic-loader>.cell:nth-child(16) {
+            --cell-color: #911750;
+        }
+
+        @keyframes ripple {
+            0% {
+                background-color: transparent;
+            }
+
+            30% {
+                background-color: var(--cell-color);
+            }
+
+            60% {
+                background-color: transparent;
+            }
+
+            100% {
+                background-color: transparent;
+            }
         }
     </style>
 </head>
 
 <body>
     <main>
-        <div class="jobList">
-            <div class="jobcard">
-                <div class="jobcardCol1">
-                    <div class="jcC1Col1">
-                        <img src="images/Google.png" alt="">
-                    </div>
-                    <div class="jcC1Col2">
-                        <h3>Product designer</h3>
-                        <p>at <span>Google</span> for <span>Design</span></p>
-                    </div>
-                </div>
-                <div class="jobcardCol2">
-                    <div class="jobType jobTag">
-                        <img src="images/Jobtype.svg" alt="">
-                        <p>Full Time</p>
-                    </div>
-                    <div class="location jobTag">
-                        <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
-                        <p>Bengaluru, Karnataka, India</p>
-                    </div>
-                    <div class="salary jobTag">
-                        <img src="images/Salary.svg" alt="">
-                        <p><span>5</span> LPA</p>
-                    </div>
-                    <div class="jobPosteddate jobTag">
-                        <img src="images/calendar.svg" alt="">
-                        <p>Posted on<span>17 Jun 2024</span></p>
-                    </div>
 
-                </div>
-                <div class="jobcardCol3">
-                    <button onclick="">View</button>
-                </div>
-            </div>
+        <div class="mosaic-loader">
+            <div class="cell d-0"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-1"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-2"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-5"></div>
+            <div class="cell d-3"></div>
+            <div class="cell d-4"></div>
+            <div class="cell d-5"></div>
+            <div class="cell d-6"></div>
         </div>
+        <h2>Loading...</h2>
+
     </main>
 </body>
 
