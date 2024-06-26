@@ -480,7 +480,7 @@ main {
     }
 }
 
-
+/* nav responsive */
 @media screen and (max-height:450px) {
     .overlay a {
         font-size: 20px;
@@ -490,5 +490,18 @@ main {
         font-size: 20px;
         top: 15px;
         right: 35px;
+    }
+}
+
+/* main page responsive */
+
+@media screen and (max-width:1500px){
+    .companyName {
+        width: 13rem;
+        /* background-color: #0E46A3; */
+    }
+
+    .ajR2col2{
+        height: 80dvh;
     }
 }
