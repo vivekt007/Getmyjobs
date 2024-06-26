@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active Jobs</title>
     <link rel="stylesheet" href="/css/recruiterMain.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 
     <!-- font links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +15,6 @@
         href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
     <!-- test link close -->
 
 </head>
@@ -102,135 +99,293 @@
 
     <main>
         <section id="one" class="activejobsContainer">
-            <div class="activeJobRow1">
-                <p><span>9 </span> Active Jobs</p>
 
-                <div class="navActions">
-                    <div class="sort-container">
-                        <label for="sort">Sort by: </label>
-                        <select id="sort" name="sort" onchange="sortPosts()">
-                            <!-- <option value="">Select</option> -->
-                            <option value="latest">Latest</option>
-                            <option value="oldest">Oldest</option>
-                        </select>
+            <div class="activeJobsRow1">
+
+                <div class="ajR2col1">
+                    <div class="activeJobRow1">
+                        <p class="epilogue"><img src="Icons/ActiveJobs-filled-Blue.svg" alt=""> <span>9 </span> Active
+                            Jobs</p>
+
+                        <div class="navActions">
+                            <div class="sort-container">
+                                <label for="sort">Sort by: </label>
+                                <select id="sort" name="sort" onchange="sortPosts()">
+                                    <!-- <option value="">Select</option> -->
+                                    <option value="latest">Latest</option>
+                                    <option value="oldest">Oldest</option>
+                                </select>
+                            </div>
+                            <div class="newJobPost">
+                                <button>+ New Post</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="newJobPost">
-                        <button>+ New Post</button>
+
+                    <div class="activeJobcol1Row2">
+
+                        <div class="candidates">
+                            <div class="candidateslabels">
+                                <div class="companyName listLabel-container">
+                                    <img class="extra" src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="listLabel">Company name</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="jobRole listLabel-container ">
+                                    <p class="listLabel">Role</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="jobExperience listLabel-container">
+                                    <p class="listLabel">Experience</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="jobType listLabel-container">
+                                    <p class="listLabel">Job Type</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="salary listLabel-container">
+                                    <p class="listLabel">Salary</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="date listLabel-container">
+                                    <p class="listLabel">Date</p>
+                                    <img src="Icons/DownIcon.svg" alt="down">
+                                </div>
+                                <div class="view-btn extra">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="candidatesdataRows">
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems Lorem Pvt Ltd, Bangalore</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="ajR2col2 slideshow-container">
+                    <div class="slide fade">
+                        <img src="media/images/Ads1.jpg" alt="Image 1">
+                    </div>
+                    <div class="slide fade">
+                        <img src="media/images/Ads2.jpg" alt="Image 2">
+                    </div>
+                    <div class="slide fade">
+                        <img src="media/images/Ads3.jpg" alt="Image 3">
                     </div>
                 </div>
             </div>
-
-            <div class="activeJobRow2">
-                <div class="jobList">
-                    <div class="jobcard">
-                        <div class="jobcardCol1">
-                            <div class="jcC1Col1">
-                                <img src="images/Google.png" alt="">
-                            </div>
-                            <div class="jcC1Col2">
-                                <h3>Product designer</h3>
-                                <p>at <span>Google</span> for <span>Design</span></p>
-                            </div>
-                        </div>
-                        <div class="jobcardCol2">
-                            <div class="jobType jobTag">
-                                <img src="images/Jobtype.svg" alt="">
-                                <p>Full Time</p>
-                            </div>
-                            <div class="location jobTag">
-                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
-                                <p>Bengaluru, Karnataka, India</p>
-                            </div>
-                            <div class="salary jobTag">
-                                <img src="images/Salary.svg" alt="">
-                                <p><span>5</span> LPA</p>
-                            </div>
-                            <div class="jobPosteddate jobTag">
-                                <img src="images/calendar.svg" alt="">
-                                <p>Posted on<span>17 Jun 2024</span></p>
-                            </div>
-
-                        </div>
-                        <div class="jobcardCol3">
-                            <button onclick="">View</button>
-                        </div>
-                    </div>
-                    <div class="jobcard">
-                        <div class="jobcardCol1">
-                            <div class="jcC1Col1">
-                                <img src="images/Google.png" alt="">
-                            </div>
-                            <div class="jcC1Col2">
-                                <h3>Product designer</h3>
-                                <p>at <span>Google</span> for <span>Design</span></p>
-                            </div>
-                        </div>
-                        <div class="jobcardCol2">
-                            <div class="jobType jobTag">
-                                <img src="images/Jobtype.svg" alt="">
-                                <p>Full Time</p>
-                            </div>
-                            <div class="location jobTag">
-                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
-                                <p>Bengaluru, Karnataka, India</p>
-                            </div>
-                            <div class="salary jobTag">
-                                <img src="images/Salary.svg" alt="">
-                                <p><span>5</span> LPA</p>
-                            </div>
-                            <div class="jobPosteddate jobTag">
-                                <img src="images/calendar.svg" alt="">
-                                <p>Posted on<span>17 Jun 2024</span></p>
-                            </div>
-
-                        </div>
-                        <div class="jobcardCol3">
-                            <button onclick="">View</button>
-                        </div>
-                    </div>
-                    <div class="jobcard">
-                        <div class="jobcardCol1">
-                            <div class="jcC1Col1">
-                                <img src="images/Google.png" alt="">
-                            </div>
-                            <div class="jcC1Col2">
-                                <h3>Product designer</h3>
-                                <p>at <span>Google</span> for <span>Design</span></p>
-                            </div>
-                        </div>
-                        <div class="jobcardCol2">
-                            <div class="jobType jobTag">
-                                <img src="images/Jobtype.svg" alt="">
-                                <p>Full Time</p>
-                            </div>
-                            <div class="location jobTag">
-                                <img src="images/location-pin-3--navigation-map-maps-pin-gps-location.svg" alt="">
-                                <p>Bengaluru, Karnataka, India</p>
-                            </div>
-                            <div class="salary jobTag">
-                                <img src="images/Salary.svg" alt="">
-                                <p><span>5</span> LPA</p>
-                            </div>
-                            <div class="jobPosteddate jobTag">
-                                <img src="images/calendar.svg" alt="">
-                                <p>Posted on<span>17 Jun 2024</span></p>
-                            </div>
-
-                        </div>
-                        <div class="jobcardCol3">
-                            <button onclick="">View</button>
-                        </div>
-                    </div>
-                </div>
         </section>
     </main>
-
-    <article>
-        <div class="carousel">
-            <img src="images/placeholder-1920x1080 potrait.png" alt="">
-        </div>
-    </article>
-
 
 </body>
 

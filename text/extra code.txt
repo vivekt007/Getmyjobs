@@ -1,0 +1,91 @@
+<iframe src='https://my.spline.design/keyboard-7a56bbeb1756f2948dd6543a5b3de246/' frameborder='0' width='100%' height='100%'></iframe>
+
+
+.jobcard {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--lightygrey-color);
+    padding: 1rem 0;
+}
+
+.jobcardCol1 {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+}
+
+.jcC1Col1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jcC1Col1 img {
+    width: 40px;
+}
+
+.jcC1Col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.jcC1Col2 h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.jcC1Col2 p {
+    font-size: 12px;
+    color: var(--darkgrey-color);
+}
+
+.jcC1Col2 span {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.jobcardCol2 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jobTag {
+    display: flex;
+    gap: 8px;
+    padding: 4px 12px;
+    background-color: #F3F8FF;
+    border-radius: 4px;
+    height: fit-content;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.jobTag img {
+    width: 14px;
+}
+
+.jobcardCol3 {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.jobcardCol3 button {
+    border: none;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}

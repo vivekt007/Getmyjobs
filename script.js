@@ -22,6 +22,7 @@ hiddenElements.forEach((el) => observer.observe(el));
 hiddenElements1.forEach((el) => observer.observe(el));
 
 
+
 // save image change
 // const myImg = document.getElementById("saveImg");
 // const myButton = document.getElementById("saveBtn");
@@ -59,3 +60,21 @@ function changeImg(button) {
 function Signin() {
     window.location.href = 'login.html';
 }
+
+
+// recruiter Js
+
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+showSlides();
