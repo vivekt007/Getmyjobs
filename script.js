@@ -24,6 +24,8 @@ const hiddenElements1 = document.querySelectorAll('.hidden1');
 hiddenElements.forEach((el) => observer.observe(el));
 hiddenElements1.forEach((el) => observer.observe(el));
 
+// image slider
+
 
 
 // save image change
@@ -67,17 +69,17 @@ function Signin() {
 
 // recruiter Js
 
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slide");
+// let slideIndex = 0;
+// const slides = document.getElementsByClassName("slide");
 
-function showSlides() {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
+// function showSlides() {
+//     for (let i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none";
+//     }
+//     slideIndex++;
+//     if (slideIndex > slides.length) { slideIndex = 1 }
+//     slides[slideIndex - 1].style.display = "block";
+//     setTimeout(showSlides, 3000);
+// }
 
-showSlides();
+// showSlides();
