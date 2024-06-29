@@ -1,4 +1,5 @@
 
+// nav animations
 function openNav() {
     document.getElementById("myNav").style.width = "20%";
 }
@@ -6,6 +7,8 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 }
 
+
+//slide in animation 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)

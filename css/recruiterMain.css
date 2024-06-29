@@ -29,6 +29,11 @@
     font-family: var(--font-family);
 }
 
+.hr-line{
+    border-bottom: 1px solid var(--lightygrey-color);
+    margin: 1rem 0;
+}
+
 nav {
     position: fixed;
     width: 100%;
@@ -101,10 +106,12 @@ nav span {
     height: 100dvh;
     width: 0%;
     position: fixed;
-    z-index: 1;
+    z-index: 9;
     top: 0;
     left: 0;
-    background-color: var(--plane-color);
+    /* background-color: var(--plane-color); */
+    background-color: #f9fafc;
+    border-radius: 8px;
     overflow-x: hidden;
     transition: 0.5s;
     display: flex;
@@ -113,6 +120,8 @@ nav span {
     justify-content: start;
     gap: 1rem;
     color: var(--dark-color);
+    border-right: 1px solid var(--lightygrey-color);
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
 }
 
 .overlay>div {
@@ -125,6 +134,7 @@ nav span {
     justify-content: end;
     color: var(--dark-color);
     padding: 0 2rem 0 0;
+    font-weight: 250;
 }
 
 .close a {
@@ -136,16 +146,36 @@ nav span {
 
 .close a:hover {
     color: var(--accent2-color);
+    cursor: pointer;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .logo img {
     width: 100px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    padding-left: 2rem;
+}
+
+.blue {
+    font-size: 32px;
+    color: var(--accent2-color);
+}
+
+.green{
+    color: green;
+}
+
+.logo-neg {
+    font-size: 32px;
+    color: var(--negative-color);
 }
 
 .overlay-content {
@@ -170,10 +200,12 @@ nav span {
     border-radius: 4px;
     border: 1px solid transparent;
     transition: 200ms;
+    width: 100%;
+    font-size: 16px;
 }
 
 .active {
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
     color: var(--plane-color);
     font-weight: 500;
 }
@@ -408,6 +440,16 @@ main {
     width: 5rem;
 }
 
+.cvsreceived{
+    width: 6rem;
+}
+
+.status{
+    width: 5rem;
+}
+
+
+
 /* .candidatesdataRows{
     display: flex;
     padding: 18px 16px;
@@ -442,30 +484,35 @@ main {
     /* background-color: #0E46A3; */
 }
 
-.view-btn {
+/* .view-btn {
     display: flex;
     justify-content: end;
     align-items: center;
     width: fit-content;
     border-radius: 4px;
     text-align: center;
-    background-color: #0E46A3;
-
-}
+    background-color: var(--plane-color);
+} */
 
 .candidatesdataCol button {
-    background-color: var(--dark-color);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: fit-content;
+    border-radius: 4px;
+    text-align: center;
+    background-color: var(--plane-color);
     outline: none;
-    color: var(--plane-color);
-    border: 1px solid var(--dark-color);
+    color: var(--accent2-color);
+    border: 1px solid var(--accent2-color);
     padding: 4px 12px;
     border-radius: 4px;
     transition: 200ms;
 }
 
 .candidatesdataCol button:hover {
-    background-color: var(--plane-color);
-    color: var(--dark-color);
+    background-color: var(--accent2-color);
+    color: var(--plane-color);
 }
 
 /* Key frames */
@@ -495,13 +542,24 @@ main {
 
 /* main page responsive */
 
-@media screen and (max-width:1500px){
+@media screen and (max-width:1400px) {
     .companyName {
         width: 13rem;
-        /* background-color: #0E46A3; */
+        background-color: #0E46A3;
     }
 
-    .ajR2col2{
+    .ajR2col2 {
+        height: 80dvh;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .companyName {
+        width: 11rem;
+        background-color: #a30e51;
+    }
+
+    .ajR2col2 {
         height: 80dvh;
     }
 }
