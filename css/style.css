@@ -537,12 +537,6 @@ datalist option {
     width: 5000px;
 }
 
-.slider .slide-track-2 {
-    animation: scroll-r 30s linear infinite;
-    display: flex;
-    width: 3500px;
-}
-
 .slider .slide {
     /* height: 75pt; */
     width: 250px;
@@ -567,7 +561,7 @@ datalist option {
     }
 
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 5));
     }
 }
 
@@ -577,7 +571,7 @@ datalist option {
     }
 
     0% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 5));
     }
 }
 
