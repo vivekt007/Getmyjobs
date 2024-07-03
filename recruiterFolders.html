@@ -35,10 +35,8 @@
             <!-- <div class="hr-line"></div> -->
             
             
-            <div class="overlay-content">
-                
+            <div class="overlay-content">    
                 <div class="hr-line" ></div>
-
                 <ul>
                     <li class="inActive">
                         <a href="recruiterActiveJobs.html" onclick="closeNav()">
@@ -46,7 +44,7 @@
                             ActiveJobs</a>
                     </li>
                     <li class="inActive">
-                        <a href="inActiveJobs.html" onclick="closeNav()">
+                        <a href="recruiterInActiveJobs.html" onclick="closeNav()">
                             <img src="Icons/InActiveJobs-outline.svg" alt="">
                             In-Active Jobs</a>
                     </li>
@@ -79,9 +77,9 @@
                         <a href="" onclick="closeNav()"><img src="Icons/logout-outline.svg" alt="">logout</a>
                     </li>
                 </ul>
-
-
             </div>
+
+
         </div>
 
         <div class="navRow1">
@@ -105,8 +103,35 @@
                         <img src="images/profile-outline.svg" alt="">
                     </button>
                 </div>
+                <!-- <div class="notification">
+                    <button class="notification-btn" onclick="notificationDisplay()"><img id="notification" src="images/notification.svg" alt=""></button>
+                </div> -->
                 <div class="notification">
-                    <button><img id="notification" src="images/notification.svg" alt=""></button>
+                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg" alt="Notification"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notificationbar" id="notificationBar">
+            <div class="notiRow1">
+                <h1>Notifications</h1>
+                <button onclick="readAll()">Mard all as read</button>
+            </div>
+            <!-- <div class="hr-line" ></div> -->
+            <div class="notiRow2">
+                <div class="notificationBox unreadNotification">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Arnav Tripati and 10+ applied for Product Designer</p>
+                        <p class="notificationTime"><Span>2h</Span> ago</p>
+                    </div>
+                </div>
+                <div class="notificationBox">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Your subscription is about to end</p>
+                        <p class="notificationTime"><Span>3h</Span> ago</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,18 +165,19 @@
 
                     </div>
                 </div>
+
                 <div class="ajR2col2 slideshow-container">
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <a href="#">
                             <img src="media/images/Ads1.jpg" alt="Image 1">
                         </a>
                     </div>
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <a href="#">
                             <img src="media/images/Ads2.jpg" alt="Image 2">
                         </a>
                     </div>
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <a href="#">
                             <img src="media/images/Ads3.jpg" alt="Image 3">
                         </a>

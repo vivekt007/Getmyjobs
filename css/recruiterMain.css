@@ -15,6 +15,7 @@
     --accent-color: #E1F7F5;
     --accent2-color: #0E46A3;
     --accent3-color: #9AC8CD;
+    --secondary-tint: #F3F8FF;
     --dark-color: #1E1E1E;
     --negative-color: #FF4E4E;
     --darkgrey-color: #6F6F6F;
@@ -29,7 +30,7 @@
     font-family: var(--font-family);
 }
 
-.hr-line{
+.hr-line {
     border-bottom: 1px solid var(--lightygrey-color);
     margin: 1rem 0;
 }
@@ -122,6 +123,7 @@ nav span {
     color: var(--dark-color);
     border-right: 1px solid var(--lightygrey-color);
     /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 
 .overlay>div {
@@ -169,7 +171,7 @@ nav span {
     color: var(--accent2-color);
 }
 
-.green{
+.green {
     color: green;
 }
 
@@ -252,9 +254,9 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
     width: 100%;
-    height: 10dvh;
+    height: 6dvh;
     background-color: var(--plane-color);
 }
 
@@ -348,9 +350,10 @@ main {
     border-radius: 8px;
     position: fixed;
     right: 2rem;
+    z-index: -1;
 }
 
-.slide {
+.adSlide {
     display: none;
     position: absolute;
     width: 100%;
@@ -358,7 +361,7 @@ main {
     /* animation: fade 3s infinite; */
 }
 
-.slide img {
+.adSlide img {
     /* width: 100%; */
     height: 100%;
     object-fit: contain;
@@ -440,11 +443,11 @@ main {
     width: 5rem;
 }
 
-.cvsreceived{
+.cvsreceived {
     width: 6rem;
 }
 
-.status{
+.status {
     width: 5rem;
 }
 
@@ -469,7 +472,7 @@ main {
     padding: 16px 16px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    border-bottom: 1px solid var(--lightygrey-color);
+    border-top: 1px solid var(--lightygrey-color);
     gap: 16px;
 }
 
@@ -526,6 +529,123 @@ main {
         opacity: 1;
     }
 }
+
+/* Notification */
+
+/* Notification */
+.notification img {
+    transition: transform 300ms;
+}
+
+.notification img.rotate {
+    transform: rotate(25deg);
+}
+
+.notificationbar {
+    background-color: var(--plane-color);
+    position: fixed;
+    top: 4rem;
+    right: 2rem;
+    z-index: 10;
+    border-radius: 12px;
+    width: 25%;
+    border: 1px solid var(--lightygrey-color);
+    height: 70vh;
+    overflow-y: scroll;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    color: var(--dark-color);
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    gap: 12px;
+}
+
+.unreadNotification {
+    background-color: var(--secondary-tint);
+}
+
+.notiRow1 {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 24px 16px 0px 16px;
+}
+
+.notiRow1 h1 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.notiRow1 button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.notificationBox {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 1px solid var(--lightygrey-color);
+    padding: 8px 0;
+    padding: 8px 16px;
+}
+
+.notificationImage img {
+    width: 24px;
+}
+
+.notificationTextBox {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notificationText {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notificationTime,
+.notificationTime span {
+    font-size: 10px;
+    color: var(--darkgrey-color);
+    font-weight: 500;
+}
+
+/* page number bar */
+
+.pageNumberbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    bottom: 0;
+}
+
+.pageNumberbar button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.pageNumbers{
+    display: flex;
+    gap: 1rem;
+}
+
+.pageNumbers button.active {
+    background-color: var(--accent2-color);
+    color: var(--plane-color);
+    font-weight: 500;
+}
+
 
 /* nav responsive */
 @media screen and (max-height:450px) {

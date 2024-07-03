@@ -17,6 +17,8 @@
 
     <!-- test link close -->
 
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
 </head>
 
 <body>
@@ -105,7 +107,31 @@
                     </button>
                 </div>
                 <div class="notification">
-                    <button><img id="notification" src="images/notification.svg" alt=""></button>
+                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg" alt="Notification"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notificationbar" id="notificationBar">
+            <div class="notiRow1">
+                <h1>Notifications</h1>
+                <button onclick="readAll()">Mard all as read</button>
+            </div>
+            <!-- <div class="hr-line" ></div> -->
+            <div class="notiRow2">
+                <div class="notificationBox unreadNotification">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Arnav Tripati and 10+ applied for Product Designer</p>
+                        <p class="notificationTime"><Span>2h</Span> ago</p>
+                    </div>
+                </div>
+                <div class="notificationBox">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Your subscription is about to end</p>
+                        <p class="notificationTime"><Span>3h</Span> ago</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,11 +198,11 @@
                             </div>
                         </div>
 
-                        <div class="candidatesdataRows">
-                            <div class="candidatedataRow">
+                        <div class="candidatesdataRows" id="candidatesContainer">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems Pvt Ltd, Bangalore</p>
+                                    <p class="candidatesdata">iVari1 Security Systems Pvt Ltd</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -199,10 +225,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari2 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -225,10 +251,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari3 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -251,10 +277,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari4 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -277,10 +303,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari5 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -303,10 +329,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari6 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -329,10 +355,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari Security7 Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -355,10 +381,10 @@
                                 </div>
                             </div>
 
-                            <div class="candidatedataRow">
+                            <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari Security Systems</p>
+                                    <p class="candidatesdata">iVari8 Security Systems</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -381,19 +407,96 @@
                                 </div>
                             </div>
 
-
-
+                            <div class="candidatedataRow" id="">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari 9 Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+                            <div class="candidatedataRow" id="">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari 10 Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- <div class="pageNumberbar">
+                        <button class="previous">Previous</button>
+                        <div class="pageNumbers">
+                            <button class="activePageNumber">1</button>
+                            <button class="inActivePageNumber">2</button>
+                            <button class="inActivePageNumber">3</button>
+                            <button class="inActivePageNumber">4</button>
+                            <button class="inActivePageNumber">5</button>
+                            <button class="inActivePageNumber">6</button>
+                            <button class="inActivePageNumber">7</button>
+                            <button class="inActivePageNumber">8</button>
+                        </div>
+                        <button class="next">Next</button>
+                    </div> -->
+
+                    <div class="pageNumberbar">
+                        <button onclick="previousPage()">Previous</button>
+                        <div class="pageNumbers">
+                            <button id="page1" onclick="changePage(1)">1</button>
+                            <button id="page2" onclick="changePage(2)">2</button>
+                            <button id="page3" onclick="changePage(3)">3</button>
+                            <button id="page4" onclick="changePage(4)">4</button>
+                            <button id="page5" onclick="changePage(5)">5</button>
+                            <button id="page6" onclick="changePage(6)">6</button>
+                            <!-- Add more buttons for additional pages -->
+                        </div>
+                        <button onclick="nextPage()">Next</button>
+                    </div>                 
+                    
                 </div>
                 <div class="ajR2col2 slideshow-container">
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <img src="media/images/Ads1.jpg" alt="Image 1">
                     </div>
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <img src="media/images/Ads2.jpg" alt="Image 2">
                     </div>
-                    <div class="slide fade">
+                    <div class="adSlide fade">
                         <img src="media/images/Ads3.jpg" alt="Image 3">
                     </div>
                 </div>
