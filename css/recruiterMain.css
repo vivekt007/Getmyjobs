@@ -665,7 +665,7 @@ main {
 @media screen and (max-width:1400px) {
     .companyName {
         width: 13rem;
-        background-color: #0E46A3;
+        /* background-color: #0E46A3; */
     }
 
     .ajR2col2 {
@@ -676,7 +676,7 @@ main {
 @media screen and (max-width:1200px) {
     .companyName {
         width: 11rem;
-        background-color: #a30e51;
+        /* background-color: #a30e51; */
     }
 
     .ajR2col2 {
