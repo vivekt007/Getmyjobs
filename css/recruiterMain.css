@@ -242,8 +242,12 @@ nav span {
     font-size: 40px;
 }
 
+body {
+    overflow: hidden;
+}
+
 main {
-    padding: 5rem 2rem;
+    padding: 4.5rem 2rem 0 2rem;
 }
 
 .activejobsContainer {
@@ -397,6 +401,7 @@ main {
     border-top-right-radius: 4px;
     border-bottom: 1px solid var(--lightygrey-color);
     gap: 16px;
+    /* background-color: #0E46A3; */
 }
 
 .listLabel-container {
@@ -406,9 +411,7 @@ main {
     font-size: 12px;
     font-weight: 600;
     color: var(--darkgrey-color);
-    /* width: 10rem; */
     gap: 8px;
-    /* background-color: #0E46A3; */
 }
 
 .candidatesdata {
@@ -419,8 +422,20 @@ main {
 
 }
 
+.checkboxes {
+    width: 1rem;
+}
+
 .companyName {
     width: 15rem;
+}
+
+.candidateName {
+    width: 13rem;
+}
+
+.candidatejobRole {
+    width: 12rem;
 }
 
 .jobRole {
@@ -443,35 +458,158 @@ main {
     width: 5rem;
 }
 
-.cvsreceived {
-    width: 6rem;
+.jobExperienceCandidate {
+    width: 12rem;
 }
 
-.status {
+.cvsreceived {
+    width: 8rem;
+}
+
+.candidateCV {
+    width: 8rem;
+}
+
+.inActiveCompanyName{
+    width: 14.2rem;
+}
+
+.inActiveJobRole{
+    width: 11.5rem;
+}
+
+.inActiveJobExperience{
+    width: 7.6rem;
+}
+
+.inActiveJobType{
+    width: 7.6rem;
+}
+
+.inActiveCvsReceived{
+    width: 7.6rem;
+}
+
+.inActiveStatus{
     width: 5rem;
 }
 
-
-
-/* .candidatesdataRows{
-    display: flex;
-    padding: 18px 16px;
-    border-bottom: 1px solid var(--lightygrey-color);
+.candidateCV button {
+    padding: 6px 8px;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    background-color: transparent;
 }
 
-.candidatedataRow{
+.candidateStatus {
+    width: 8rem;
+}
+
+.candidateStarStatus{
+    width: 8rem;
+}
+
+.candidateStarStatus button{
+    /* width: 100%; */
+    outline: none;
+    border: 1px solid var(--negative-color);
+    color: var(--negative-color);
+    background-color: transparent;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+.candidateStatus select {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.status {
+    width: 8rem;
+}
+
+.view-btn {
+    width: 5rem;
+}
+
+.view-candidate-btn button {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--dark-color);
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.view-candidate-btn {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 5rem;
+    /* background-color: #0E46A3; */
+}
+
+.popupMenu {
+    position: absolute;
+    display: none;
+    background-color: var(--plane-color);
+    border: 1px solid var(--lightygrey-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+.popupMenu img {
+    width: 12px;
+}
+
+.popupMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.popupMenu li {
+    padding: 8px;
+    border-bottom: 1px solid var(--lightygrey-color);
+
+}
+
+.popupMenu li button {
+    text-decoration: none;
+    color: var(--dark-color);
+    display: block;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
-} */
+    border: none;
+}
+
+.popupMenu li:hover {
+    background-color: var(--secondary-tint);
+}
+
+.popupmenushow {
+    display: block;
+}
+
+.delete-btn>button>p{
+    color: var(--negative-color);
+}
 
 .candidatedataRow {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: start;
-    padding: 16px 16px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    padding: 10px 16px;
     border-top: 1px solid var(--lightygrey-color);
     gap: 16px;
 }
@@ -487,15 +625,32 @@ main {
     /* background-color: #0E46A3; */
 }
 
-/* .view-btn {
+.editList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.view-btn {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.view-btn button {
     display: flex;
     justify-content: end;
     align-items: center;
     width: fit-content;
-    border-radius: 4px;
     text-align: center;
-    background-color: var(--plane-color);
-} */
+    background-color: transparent;
+    outline: none;
+    color: var(--darkgrey-color);
+    border: none;
+    font-size: 14px;
+}
+
 
 .candidatesdataCol button {
     display: flex;
@@ -516,6 +671,16 @@ main {
 .candidatesdataCol button:hover {
     background-color: var(--accent2-color);
     color: var(--plane-color);
+}
+
+.candidatesReceivedDataCol {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--dark-color);
+    gap: 8px;
 }
 
 /* Key frames */
@@ -618,7 +783,7 @@ main {
 
 /* page number bar */
 
-.pageNumberbar{
+.pageNumberbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -626,7 +791,7 @@ main {
     bottom: 0;
 }
 
-.pageNumberbar button{
+.pageNumberbar button {
     outline: none;
     border: none;
     background-color: transparent;
@@ -635,7 +800,7 @@ main {
     border-radius: 2px;
 }
 
-.pageNumbers{
+.pageNumbers {
     display: flex;
     gap: 1rem;
 }

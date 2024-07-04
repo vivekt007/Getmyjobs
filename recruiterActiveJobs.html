@@ -191,9 +191,10 @@
                                     <p class="listLabel">Date</p>
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>
-                                <div class="view-btn extra">
-                                    <button class="candidatesdata">View</button>
-                                    <!-- <p class="candidatesdata">View</p> -->
+                                <div class="view-btn">
+                                    <div class="editList">
+                                        <button class="candidatesdata">&#10247;</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +203,7 @@
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari1 Security Systems Pvt Ltd</p>
+                                    <p class="candidatesdata">iVari1 Security Systems Pvt Ltd, bangalore</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -228,7 +229,7 @@
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari2 Security Systems</p>
+                                    <p class="candidatesdata">Narayana Nethralaya</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -254,7 +255,7 @@
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari3 Security Systems</p>
+                                    <p class="candidatesdata">Aster Medical</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -280,7 +281,7 @@
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari4 Security Systems</p>
+                                    <p class="candidatesdata">Eye Q India</p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -306,7 +307,7 @@
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
-                                    <p class="candidatesdata">iVari5 Security Systems</p>
+                                    <p class="candidatesdata">iVari5 </p>
                                 </div>
                                 <div class="candidatesdataCol jobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -459,23 +460,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="pageNumberbar">
-                        <button class="previous">Previous</button>
-                        <div class="pageNumbers">
-                            <button class="activePageNumber">1</button>
-                            <button class="inActivePageNumber">2</button>
-                            <button class="inActivePageNumber">3</button>
-                            <button class="inActivePageNumber">4</button>
-                            <button class="inActivePageNumber">5</button>
-                            <button class="inActivePageNumber">6</button>
-                            <button class="inActivePageNumber">7</button>
-                            <button class="inActivePageNumber">8</button>
-                        </div>
-                        <button class="next">Next</button>
-                    </div> -->
 
                     <div class="pageNumberbar">
-                        <button onclick="previousPage()">Previous</button>
+                        <button onclick="previousPage()">&#8592; Previous</button>
                         <div class="pageNumbers">
                             <button id="page1" onclick="changePage(1)">1</button>
                             <button id="page2" onclick="changePage(2)">2</button>
@@ -483,9 +470,8 @@
                             <button id="page4" onclick="changePage(4)">4</button>
                             <button id="page5" onclick="changePage(5)">5</button>
                             <button id="page6" onclick="changePage(6)">6</button>
-                            <!-- Add more buttons for additional pages -->
                         </div>
-                        <button onclick="nextPage()">Next</button>
+                        <button onclick="nextPage()">Next &#8594;</button>
                     </div>                 
                     
                 </div>

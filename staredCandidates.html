@@ -132,7 +132,8 @@
                                 </select>
                             </div>
                             <div class="newJobPost">
-                                <button><a href="staredCandidates.html"><img src="Icons/savedCandidatesoutline.svg" alt=""></a></button>
+                                <button><a href="recruiterCandidates.html"><img src="Icons/candidates-outline-white.svg"
+                                            alt=""></a></button>
                             </div>
                         </div>
                     </div>
@@ -162,7 +163,7 @@
                                     <p class="listLabel">CV</p>
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>
-                                <div class="status listLabel-container">
+                                <div class="status listLabel-container extra">
                                     <p class="listLabel">Status</p>
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>
@@ -205,17 +206,8 @@
                                 <div class="candidatesReceivedDataCol candidateCV">
                                     <button onclick="viewCV()"><img src="Icons/CV-outline.svg" alt=""> View CV</button>
                                 </div>
-                                <div class="candidatesReceivedDataCol candidateStatus">
-                                    <!-- <button onclick="viewCV()">&#9679; <span>Hired</span><img src="Icons/DownIcon.svg" alt=""></button> -->
-                                    <form action="#">
-                                        <select name="candidateStatus" id="candidateStatus">
-                                            <option value="hired">Hired</option>
-                                            <option value="rejected">Rejected</option>
-                                            <option value="aptitude">Aptitude</option>
-                                            <option value="telephonic">Telephonic</option>
-                                            <option value="hr">Hr</option>
-                                        </select>
-                                    </form>
+                                <div class="candidatesReceivedDataCol candidateStarStatus">
+                                    <button onclick="removeStared()"><span>Remove</span></button>
                                 </div>
                                 <div class="candidatesReceivedDataCol view-candidate-btn">
                                     <button class="candidatesdata">View</button>
@@ -240,17 +232,8 @@
                                 <div class="candidatesReceivedDataCol candidateCV">
                                     <button onclick="viewCV()"><img src="Icons/CV-outline.svg" alt=""> View CV</button>
                                 </div>
-                                <div class="candidatesReceivedDataCol candidateStatus">
-                                    <!-- <button onclick="viewCV()">&#9679; <span>Hired</span><img src="Icons/DownIcon.svg" alt=""></button> -->
-                                    <form action="#">
-                                        <select name="candidateStatus" id="candidateStatus">
-                                            <option value="hired">Hired</option>
-                                            <option value="rejected">Rejected</option>
-                                            <option value="aptitude">Aptitude</option>
-                                            <option value="telephonic">Telephonic</option>
-                                            <option value="hr">Hr</option>
-                                        </select>
-                                    </form>
+                                <div class="candidatesReceivedDataCol candidateStarStatus">
+                                    <button onclick="removeStared()"><span>Remove</span></button>
                                 </div>
                                 <div class="candidatesReceivedDataCol view-candidate-btn">
                                     <button class="candidatesdata">View</button>

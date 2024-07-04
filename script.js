@@ -165,3 +165,41 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Initial call to display the first page
     changePage(1);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuButtons = document.querySelectorAll('.menuButton');
+    menuButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const popupMenu = button.nextElementSibling;
+
+            // Close all other open menus
+            document.querySelectorAll('.popupMenu').forEach(menu => {
+                if (menu !== popupMenu) {
+                    menu.classList.remove('popupmenushow');
+                }
+            });
+
+            // Toggle the display of the clicked menu
+            const rect = button.getBoundingClientRect();
+            popupMenu.style.top = `${rect.bottom + window.scrollY}px`;
+            popupMenu.style.left = `${rect.left + window.scrollX}px`;
+            popupMenu.classList.toggle('popupmenushow');
+        });
+    });
+
+    document.addEventListener('click', () => {
+        // Hide all menus if clicking outside
+        document.querySelectorAll('.popupMenu').forEach(menu => {
+            menu.classList.remove('popupmenushow');
+        });
+    });
+
+    document.querySelectorAll('.popupMenu').forEach(menu => {
+        menu.addEventListener('click', (event) => {
+            // Prevent click events inside the menu from propagating to the document
+            event.stopPropagation();
+        });
+    });
+});
