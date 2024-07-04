@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Candidates</title>
+    <title>Folders</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
+    <link rel="stylesheet" href="css/folders.css">
     <script defer src="script.js"></script>
 
     <!-- font links open -->
@@ -29,14 +30,14 @@
             <div class="logo">
                 <!-- <img src="images/Get_My_Jobs_Logo.png" alt=""> -->
                 <h1><span class="blue">G</span>etmyj<span class="blue">o</span>bs<span class="logo-neg">.in</span></h1>
-                
+
             </div>
 
             <!-- <div class="hr-line"></div> -->
-            
-            
-            <div class="overlay-content">    
-                <div class="hr-line" ></div>
+
+
+            <div class="overlay-content">
+                <div class="hr-line"></div>
                 <ul>
                     <li class="inActive">
                         <a href="recruiterActiveJobs.html" onclick="closeNav()">
@@ -54,7 +55,7 @@
                             Drafts</a>
                     </li>
                     <li class="inActive">
-                        <a  href="recruiterCandidates.html" onclick="closeNav()">
+                        <a href="recruiterCandidates.html" onclick="closeNav()">
                             <img src="Icons/Candidates-outline.svg" alt="">
                             Candidates</a>
                     </li>
@@ -67,7 +68,7 @@
                         <a href="recruitersettings.html" onclick="closeNav()">
                             <img src="Icons/settings-outline.svg" alt="">
                             Settings</a>
-                    </li> 
+                    </li>
                 </ul>
 
                 <div class="hr-line"></div>
@@ -107,7 +108,8 @@
                     <button class="notification-btn" onclick="notificationDisplay()"><img id="notification" src="images/notification.svg" alt=""></button>
                 </div> -->
                 <div class="notification">
-                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg" alt="Notification"></button>
+                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg"
+                            alt="Notification"></button>
                 </div>
             </div>
         </div>
@@ -120,14 +122,16 @@
             <!-- <div class="hr-line" ></div> -->
             <div class="notiRow2">
                 <div class="notificationBox unreadNotification">
-                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
                     <div class="notificationTextBox">
                         <p class="notificationText">Arnav Tripati and 10+ applied for Product Designer</p>
                         <p class="notificationTime"><Span>2h</Span> ago</p>
                     </div>
                 </div>
                 <div class="notificationBox">
-                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
                     <div class="notificationTextBox">
                         <p class="notificationText">Your subscription is about to end</p>
                         <p class="notificationTime"><Span>3h</Span> ago</p>
@@ -144,7 +148,8 @@
 
                 <div class="ajR2col1">
                     <div class="activeJobRow1">
-                        <p class="epilogue"><img src="Icons/candidates-filled-blue.svg" alt=""> <span></span>All Folders</p>
+                        <p class="epilogue"><img src="Icons/candidates-filled-blue.svg" alt=""> <span></span>All Folders
+                        </p>
 
                         <div class="navActions">
                             <div class="sort-container">
@@ -156,12 +161,211 @@
                                 </select>
                             </div>
                             <div class="newJobPost">
-                                <button>+ New Post</button>
+                                <button onclick="openPopup()">+ Create folder</button>
+                                <div id="popupForm" class="createNewFolderPopup hidden">
+                                    <div class="createFolderRow1">
+                                        <h1 class="epilogue">Create New Folder</h1>
+                                    </div>
+                                    <form class="createFolderRow2" action="">
+                                        <label for="folderName">Folder Name</label>
+                                        <input type="text" name="folderName" id="folderName" placeholder="Name of folder"/>
+                                        <div class="button-group">
+                                            <button type="button" onclick="closePopup()">Cancel</button>
+                                            <input type="submit" value="Submit">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="activeJobcol1Row2">
+                    <div class="foldersCol1Row1">
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="folderBox">
+                            <div class="folderBoxRow1">
+                                <img src="Icons/folder-outline.svg" alt="">
+
+                                <div class="folderEditList">
+                                    <button class="folderMenuButton">&#10247;</button>
+                                    <div class="folderPopupMenu hidden">
+                                        <ul>
+                                            <li class="export-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/export-outline.svg" alt="">
+                                                    <p>Export</p>
+                                                </button></li>
+                                            <li class="rename-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/folder-rename.svg" alt="">
+                                                    <p>Rename</p>
+                                                </button></li>
+                                            <li class="delete-btn"><button onclick="placeholder()"><img
+                                                        src="Icons/Remove-outline.svg" alt="">
+                                                    <p>Delete</p>
+                                                </button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="folderBoxRow2">
+                                <h1 class="folderName">Folder name</h1>
+                                <p>Created on <span>25/06/2024</span></p>
+                            </div>
+                        </div>
+
+                        <div class="createFolderBox">
+                            <button onclick="openPopup()">
+                                <img src="Icons/create-new-folder.svg" alt="">
+                                <h1>Create new folder</h1>
+                            </button>
+                        </div>
 
                     </div>
                 </div>

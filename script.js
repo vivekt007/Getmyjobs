@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     changePage(1);
 });
 
+// candidates menu
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuButtons = document.querySelectorAll('.menuButton');
@@ -203,3 +204,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// folder menu
+
+document.addEventListener('DOMContentLoaded', () => {
+    const folderMenuButtons = document.querySelectorAll('.folderMenuButton');
+    folderMenuButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const folderPopupMenu = button.nextElementSibling;
+
+            // Close all other open menus
+            document.querySelectorAll('.folderPopupMenu').forEach(menu => {
+                if (menu !== folderPopupMenu) {
+                    menu.classList.remove('folderPopupMenushow');
+                }
+            });
+
+            // Toggle the display of the clicked menu
+            const rect = button.getBoundingClientRect();
+            folderPopupMenu.style.top = `${rect.bottom + window.scrollY}px`;
+            folderPopupMenu.style.left = `${rect.left + window.scrollX}px`;
+            folderPopupMenu.classList.toggle('folderPopupMenushow');
+        });
+    });
+
+    document.addEventListener('click', () => {
+        // Hide all menus if clicking outside
+        document.querySelectorAll('.folderPopupMenu').forEach(menu => {
+            menu.classList.remove('folderPopupMenushow');
+        });
+    });
+
+    document.querySelectorAll('.folderPopupMenu').forEach(menu => {
+        menu.addEventListener('click', (event) => {
+            // Prevent click events inside the menu from propagating to the document
+            event.stopPropagation();
+        });
+    });
+});
+
+// create new folder popup
+function openPopup() {
+    document.getElementById('popupForm').classList.remove('hidden');
+    document.addEventListener('click', closePopupOnClickOutside);
+}
+
+function closePopup() {
+    document.getElementById('popupForm').classList.add('hidden');
+    document.removeEventListener('click', closePopupOnClickOutside);
+}
+
+function closePopupOnClickOutside(event) {
+    const popupForm = document.getElementById('popupForm');
+    const button = document.querySelector('.newJobPost button');
+
+    if (!popupForm.contains(event.target) && !button.contains(event.target)) {
+        closePopup();
+    }
+}

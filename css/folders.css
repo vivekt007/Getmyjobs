@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    color: var(--textcolor);
+    font-family: 'Roboto', monospace;
+}
+
+:root {
+    --primary-color: #1E0342;
+    --accent-color: #E1F7F5;
+    --accent2-color: #0E46A3;
+    --accent3-color: #9AC8CD;
+    --dark-color: #1E1E1E;
+    --negative-color: #FF4E4E;
+    --darkgrey-color: #6F6F6F;
+    --lightygrey-color: #D9D9D9;
+    --textfieldgray-color: #F5F5F5;
+    --plane-color: #ffffff;
+    --border-shadow: rgba(23, 26, 31, 0.252);
+    --font-family: 'Epilogue', sans-serif;
+}
+
+.foldersCol1Row1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2.9rem;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--dark-color);
+    padding: 1rem 0 0 0;
+}
+
+.createFolderBox {
+    border: 1px solid var(--lightygrey-color);
+    width: 15rem;
+    height: 10rem;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--secondary-tint);
+}
+
+.createFolderBox button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.createFolderBox img {
+    width: 24px;
+}
+
+.createFolderBox h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.folderBox {
+    border: 1px solid var(--lightygrey-color);
+    width: 15rem;
+    height: 10rem;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.folderBox:hover {
+    background-color: var(--secondary-tint);
+}
+
+.folderBox img {
+    width: 18px;
+}
+
+.folderBoxRow1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.folderBoxRow2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.folderBoxRow2 h1 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.folderBoxRow2 p {
+    font-size: 12px;
+    color: var(--darkgrey-color);
+}
+
+.folderMenuButton {
+    background-color: transparent;
+    border: none;
+}
+
+.folderPopupMenu {
+    position: absolute;
+    display: none;
+    background-color: var(--plane-color);
+    border: 1px solid var(--lightygrey-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+.folderPopupMenu img {
+    width: 12px;
+}
+
+.folderPopupMenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.folderPopupMenu li {
+    padding: 8px;
+    border-bottom: 1px solid var(--lightygrey-color);
+}
+
+.folderPopupMenu li button {
+    text-decoration: none;
+    color: var(--dark-color);
+    display: block;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    background-color: transparent;
+}
+
+.folderPopupMenu li:hover {
+    background-color: var(--secondary-tint);
+}
+
+.folderPopupMenushow {
+    display: block;
+}
+
+.delete-btn>button>p {
+    color: var(--negative-color);
+}
+
+.createNewFolderPopup {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    background-color: var(--plane-color);
+    border: 1px solid var(--lightygrey-color);
+    z-index: 10;
+    width: 25rem;
+    height: fit-content;
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+.createFolderRow1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.createFolderRow2 {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.createFolderRow2 input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--lightygrey-color);
+    border-radius: 4px;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.button-group button,
+.button-group input[type="submit"] {
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-group button {
+    border: 1px solid var(--dark-color);
+    background-color: var(--plane-color);
+    color: var(--dark-color);
+    /* padding: 0.5rem 1rem; */
+}
+
+.button-group button:hover{
+    background-color: var(--negative-color);
+    color: var(--plane-color);
+    border: 1px solid transparent;
+}
+
+.button-group input[type="submit"] {
+    padding: 0rem 1rem;
+    border: 1px solid var(--accent2-color);
+    background-color: var(--accent2-color);
+    color: var(--plane-color);
+}
+
+.button-group input[type="submit"]:hover{
+    background-color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
