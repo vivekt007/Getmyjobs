@@ -7,23 +7,23 @@
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
     color: var(--textcolor);
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
 :root {
-    --primary-color: #1E0342;
-    --accent-color: #E1F7F5;
-    --accent2-color: #0E46A3;
-    --accent3-color: #9AC8CD;
-    --secondary-tint: #F3F8FF;
-    --dark-color: #1E1E1E;
-    --negative-color: #FF4E4E;
-    --darkgrey-color: #6F6F6F;
-    --lightygrey-color: #D9D9D9;
-    --textfieldgray-color: #F5F5F5;
+    --primary-color: #1e0342;
+    --accent-color: #e1f7f5;
+    --accent2-color: #0e46a3;
+    --accent3-color: #9ac8cd;
+    --secondary-tint: #f3f8ff;
+    --dark-color: #1e1e1e;
+    --negative-color: #ff4e4e;
+    --darkgrey-color: #6f6f6f;
+    --lightygrey-color: #d9d9d9;
+    --textfieldgray-color: #f5f5f5;
     --plane-color: #ffffff;
     --border-shadow: rgba(23, 26, 31, 0.252);
-    --font-family: 'Epilogue', sans-serif;
+    --font-family: "Epilogue", sans-serif;
 }
 
 .epilogue {
@@ -126,7 +126,7 @@ nav span {
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 }
 
-.overlay>div {
+.overlay > div {
     width: 100%;
 }
 
@@ -175,6 +175,10 @@ nav span {
     color: green;
 }
 
+.delete {
+    color: var(--negative-color);
+}
+
 .logo-neg {
     font-size: 32px;
     color: var(--negative-color);
@@ -220,7 +224,7 @@ nav span {
     color: var(--dark-color);
 }
 
-.overlay-content>ul>li>a {
+.overlay-content > ul > li > a {
     padding: 8px;
     text-decoration: none;
     font-size: 18px;
@@ -330,7 +334,6 @@ main {
     background-color: var(--primary-color);
 }
 
-
 /* job list */
 
 .activeJobsRow1 {
@@ -395,7 +398,7 @@ main {
     width: 100%;
     align-items: center;
     justify-content: start;
-    background-color: #F2F4F7;
+    background-color: #f2f4f7;
     padding: 8px 16px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -419,7 +422,6 @@ main {
     /* white-space: nowrap; */
     /* text-overflow: ellipsis; */
     /* display: inline-block; */
-
 }
 
 .checkboxes {
@@ -470,27 +472,27 @@ main {
     width: 8rem;
 }
 
-.inActiveCompanyName{
+.inActiveCompanyName {
     width: 14.2rem;
 }
 
-.inActiveJobRole{
+.inActiveJobRole {
     width: 11.5rem;
 }
 
-.inActiveJobExperience{
+.inActiveJobExperience {
     width: 7.6rem;
 }
 
-.inActiveJobType{
+.inActiveJobType {
     width: 7.6rem;
 }
 
-.inActiveCvsReceived{
+.inActiveCvsReceived {
     width: 7.6rem;
 }
 
-.inActiveStatus{
+.inActiveStatus {
     width: 5rem;
 }
 
@@ -505,11 +507,11 @@ main {
     width: 8rem;
 }
 
-.candidateStarStatus{
+.candidateStarStatus {
     width: 8rem;
 }
 
-.candidateStarStatus button{
+.candidateStarStatus button {
     /* width: 100%; */
     outline: none;
     border: 1px solid var(--negative-color);
@@ -577,7 +579,6 @@ main {
 .popupMenu li {
     padding: 8px;
     border-bottom: 1px solid var(--lightygrey-color);
-
 }
 
 .popupMenu li button {
@@ -600,7 +601,7 @@ main {
     display: block;
 }
 
-.delete-btn>button>p{
+.delete-btn > button > p {
     color: var(--negative-color);
 }
 
@@ -651,7 +652,6 @@ main {
     font-size: 14px;
 }
 
-
 .candidatesdataCol button {
     display: flex;
     justify-content: end;
@@ -668,7 +668,7 @@ main {
     transition: 200ms;
 }
 
-.candidatesdataCol button:hover {
+.candidatesdataCol > button:hover {
     background-color: var(--accent2-color);
     color: var(--plane-color);
 }
@@ -781,6 +781,32 @@ main {
     font-weight: 500;
 }
 
+/* actions popup */
+
+#jobActiveJobActions {
+    position: absolute;
+    top: 25%;
+    left: 67%;
+    border: 1px solid var(--lightygrey-color);
+    background-color: var(--plane-color);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.jobActionBtns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.jobActionBtns img {
+    width: 14px;
+}
+
 /* page number bar */
 
 .pageNumberbar {
@@ -811,9 +837,8 @@ main {
     font-weight: 500;
 }
 
-
 /* nav responsive */
-@media screen and (max-height:450px) {
+@media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px;
     }
@@ -827,7 +852,7 @@ main {
 
 /* main page responsive */
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     .companyName {
         width: 13rem;
         /* background-color: #0E46A3; */
@@ -838,7 +863,7 @@ main {
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     .companyName {
         width: 11rem;
         /* background-color: #a30e51; */

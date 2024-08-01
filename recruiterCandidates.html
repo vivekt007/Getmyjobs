@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candidates</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
-    <script defer src="script.js"></script>
+    <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +101,7 @@
                     </form>
                 </div>
                 <div class="profilepicture">
-                    <button>
+                    <button onclick="recruiterProfile()">
                         <img src="images/profile-outline.svg" alt="">
                     </button>
                 </div>
@@ -132,7 +132,8 @@
                                 </select>
                             </div>
                             <div class="newJobPost">
-                                <button><a href="staredCandidates.html"><img src="Icons/savedCandidatesoutline.svg" alt=""></a></button>
+                                <button><a href="staredCandidates.html"><img src="Icons/savedCandidatesoutline.svg"
+                                            alt=""></a></button>
                             </div>
                         </div>
                     </div>
@@ -142,7 +143,7 @@
                             <div class="candidateslabels">
                                 <div class="checkboxes">
                                     <form action="">
-                                        <input type="checkbox" name="" id="listLabel1">
+                                        <input type="checkbox" name="" id="listLabel1" onclick="toggle(this);">
                                     </form>
                                 </div>
                                 <div class="candidateName listLabel-container">
@@ -168,8 +169,7 @@
                                 </div>
                                 <div class="view-btn">
                                     <div class="editList">
-                                        <button class="candidatesdata menuButton">&#10247;</button>
-                                        <!-- <button class="menuButton">⋮</button> -->
+                                        <!-- <button class="candidatesdata menuButton">&#10247;</button>
                                         <div class="popupMenu hidden">
                                             <ul>
                                                 <li class="export-btn"><button onclick="placeholder()"><img
@@ -181,6 +181,18 @@
                                                         <p>Delete</p>
                                                     </button></li>
                                             </ul>
+                                        </div> -->
+                                        <button class="candidatesdata" popovertarget="jobActiveJobActions">&#10247;
+                                        </button>
+                                        <div id="jobActiveJobActions" popover>
+                                            <button class="jobActionBtns"><img src="Icons/export-outline.svg"
+                                                    alt="Export Image">
+                                                <p>Export</p>
+                                            </button>
+                                            <button class="jobActionBtns"><img src="Icons/Remove-outline.svg"
+                                                    alt="Export Image">
+                                                <p class="delete">Delete</p>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +206,7 @@
                                     </form>
                                 </div>
                                 <div class="candidatesReceivedDataCol candidateName">
-                                    <p class="candidatesdata">Darshan Shinde</p>
+                                    <p class="candidatesdata"><span>Darshan Shinde</span></p>
                                 </div>
                                 <div class="candidatesReceivedDataCol candidatejobRole">
                                     <p class="candidatesdata">Developer</p>

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drafts</title>
+    <title>Active Jobs</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
+    <link rel="stylesheet" href="css/recruiterProfile.css">
     <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
@@ -16,6 +17,8 @@
         rel="stylesheet">
 
     <!-- test link close -->
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
 </head>
 
@@ -50,9 +53,9 @@
                             <img src="Icons/InActiveJobs-outline.svg" alt="">
                             In-Active Jobs</a>
                     </li>
-                    <li class="active">
-                        <a class="primary-text" href="recruiterDrafts.html" onclick="closeNav()">
-                            <img src="Icons/Drafts-filled.svg" alt="">
+                    <li class="inActive">
+                        <a href="recruiterDrafts.html" onclick="closeNav()">
+                            <img src="Icons/Drafts-outline.svg" alt="">
                             Drafts</a>
                     </li>
                     <li class="inActive">
@@ -76,7 +79,8 @@
 
                 <ul>
                     <li class="inActive">
-                        <a href="" onclick="closeNav()"><img src="Icons/logout-outline.svg" alt="">logout</a>
+                        <a href="" onclick="closeNav()"><img src="Icons/logout-outline.svg" alt="">
+                            logout</a>
                     </li>
                 </ul>
             </div>
@@ -88,10 +92,6 @@
             <h1 class="epilogue">Recruiter Dashboard</h1>
 
             <div class="recruiterProfile">
-                <!-- <div class="nameDesignation">
-                    <h3>Pranav Patil</h3>
-                    <p>Recruitment Specialist</p>
-                </div> -->
                 <div class="searchbar">
                     <form action="">
                         <input type="search" name="" id="">
@@ -100,63 +100,45 @@
                 </div>
                 <div class="profilepicture">
                     <button onclick="recruiterProfile()">
-                        <img src="images/profile-outline.svg" alt="">
+                        <img src="Icons/profile-filled.svg" alt="">
                     </button>
                 </div>
                 <div class="notification">
-                    <button><img id="notification" src="images/notification.svg" alt=""></button>
+                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg"
+                            alt="Notification"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notificationbar" id="notificationBar">
+            <div class="notiRow1">
+                <h1>Notifications</h1>
+                <button onclick="readAll()">Mard all as read</button>
+            </div>
+            <!-- <div class="hr-line" ></div> -->
+            <div class="notiRow2">
+                <div class="notificationBox unreadNotification">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Arnav Tripati and 10+ applied for Product Designer</p>
+                        <p class="notificationTime"><Span>2h</Span> ago</p>
+                    </div>
+                </div>
+                <div class="notificationBox">
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
+                    <div class="notificationTextBox">
+                        <p class="notificationText">Your subscription is about to end</p>
+                        <p class="notificationTime"><Span>3h</Span> ago</p>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="one" class="activejobsContainer">
-
-            <div class="activeJobsRow1">
-
-                <div class="ajR2col1">
-                    <div class="activeJobRow1">
-                        <p class="epilogue"><img src="Icons/drafts-filled-blue.svg" alt=""> <span>10 </span>Drafts</p>
-
-                        <div class="navActions">
-                            <div class="sort-container">
-                                <label for="sort">Sort by: </label>
-                                <select id="sort" name="sort" onchange="sortPosts()">
-                                    <!-- <option value="">Select</option> -->
-                                    <option value="latest">Latest</option>
-                                    <option value="oldest">Oldest</option>
-                                </select>
-                            </div>
-                            <div class="newJobPost">
-                                <button>+ New Post</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="activeJobcol1Row2">
-
-                    </div>
-                </div>
-                <div class="ajR2col2 slideshow-container">
-                    <div class="adSlide fade">
-                        <a href="#">
-                            <img src="media/images/Ads1.jpg" alt="Image 1">
-                        </a>
-                    </div>
-                    <div class="adSlide fade">
-                        <a href="#">
-                            <img src="media/images/Ads2.jpg" alt="Image 2">
-                        </a>
-                    </div>
-                    <div class="adSlide fade">
-                        <a href="#">
-                            <img src="media/images/Ads3.jpg" alt="Image 3">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <h1>This is profile section</h1>
     </main>
 
 </body>

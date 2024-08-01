@@ -7,7 +7,7 @@
     <title>Folders</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
     <link rel="stylesheet" href="css/folders.css">
-    <script defer src="script.js"></script>
+    <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -100,7 +100,7 @@
                     </form>
                 </div>
                 <div class="profilepicture">
-                    <button>
+                    <button onclick="recruiterProfile()">
                         <img src="images/profile-outline.svg" alt="">
                     </button>
                 </div>
@@ -168,7 +168,8 @@
                                     </div>
                                     <form class="createFolderRow2" action="">
                                         <label for="folderName">Folder Name</label>
-                                        <input type="text" name="folderName" id="folderName" placeholder="Name of folder"/>
+                                        <input type="text" name="folderName" id="folderName"
+                                            placeholder="Name of folder" />
                                         <div class="button-group">
                                             <button type="button" onclick="closePopup()">Cancel</button>
                                             <input type="submit" value="Submit">

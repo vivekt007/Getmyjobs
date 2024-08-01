@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candidates</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
-    <script defer src="script.js"></script>
+    <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,7 +101,7 @@
                     </form>
                 </div>
                 <div class="profilepicture">
-                    <button>
+                    <button onclick="recruiterProfile()">
                         <img src="images/profile-outline.svg" alt="">
                     </button>
                 </div>
@@ -119,7 +119,8 @@
 
                 <div class="ajR2col1">
                     <div class="activeJobRow1">
-                        <p class="epilogue"><img src="Icons/stared-candidate.svg" alt=""> <span></span>Stared Candidates</p>
+                        <p class="epilogue"><img src="Icons/stared-candidate.svg" alt=""> <span></span>Stared Candidates
+                        </p>
 
                         <div class="navActions">
                             <div class="sort-container">
@@ -142,11 +143,10 @@
                             <div class="candidateslabels">
                                 <div class="checkboxes">
                                     <form action="">
-                                        <input type="checkbox" name="" id="listLabel1">
+                                        <input type="checkbox" name="" id="listLabel1" onclick="toggle(this);">
                                     </form>
                                 </div>
                                 <div class="candidateName listLabel-container">
-                                    <!-- <img class="extra" src="Icons/companyPlaceholder.svg" alt=""> -->
                                     <p class="listLabel">Company name</p>
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>

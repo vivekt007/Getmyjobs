@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Active Jobs</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/activeJobs.css">
+    <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,11 +36,11 @@
             </div>
 
             <!-- <div class="hr-line"></div> -->
-            
-            
+
+
             <div class="overlay-content">
-                
-                <div class="hr-line" ></div>
+
+                <div class="hr-line"></div>
 
                 <ul>
                     <li class="active">
@@ -71,7 +72,7 @@
                         <a href="recruiterSettings.html" onclick="closeNav()">
                             <img src="Icons/settings-outline.svg" alt="">
                             Settings</a>
-                    </li>    
+                    </li>
                 </ul>
 
                 <div class="hr-line"></div>
@@ -102,12 +103,13 @@
                     </form>
                 </div>
                 <div class="profilepicture">
-                    <button>
+                    <button onclick="recruiterProfile()">
                         <img src="images/profile-outline.svg" alt="">
                     </button>
                 </div>
                 <div class="notification">
-                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg" alt="Notification"></button>
+                    <button onclick="notificationDisplay()"><img id="notificationIcon" src="images/notification.svg"
+                            alt="Notification"></button>
                 </div>
             </div>
         </div>
@@ -120,14 +122,16 @@
             <!-- <div class="hr-line" ></div> -->
             <div class="notiRow2">
                 <div class="notificationBox unreadNotification">
-                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
                     <div class="notificationTextBox">
                         <p class="notificationText">Arnav Tripati and 10+ applied for Product Designer</p>
                         <p class="notificationTime"><Span>2h</Span> ago</p>
                     </div>
                 </div>
                 <div class="notificationBox">
-                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg" alt="notification image"></div>
+                    <div class="notificationImage"><img src="media/images/landscape-placeholder.svg"
+                            alt="notification image"></div>
                     <div class="notificationTextBox">
                         <p class="notificationText">Your subscription is about to end</p>
                         <p class="notificationTime"><Span>3h</Span> ago</p>
@@ -191,9 +195,8 @@
                                     <p class="listLabel">Date</p>
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>
-                                <div class="view-btn">
+                                <div class="view-btn extra">
                                     <div class="editList">
-                                        <button class="candidatesdata">&#10247;</button>
                                     </div>
                                 </div>
                             </div>
@@ -221,8 +224,134 @@
                                     <p class="candidatesdata">25/02/2024</p>
                                 </div>
                                 <div class="candidatesdataCol view-btn">
-                                    <button class="candidatesdata">View</button>
-                                    <!-- <p class="candidatesdata">View</p> -->
+                                    <button class="" popovertarget="jobPopup">View</button>
+                                    <div id="jobPopup" class="jobPopup" popover>
+                                        <div class="jobPopupRow1">
+                                            <h1><span>Job Details</span></h1>
+                                            <button popovertarget="jobPopup" popovertargetaction="hide"
+                                                id="closePopupBtn"><img src="Icons/close-x-btn.svg" alt=""></button>
+                                        </div>
+                                        <div class="jobPopupRow2">
+                                            <p><span>Senoir Product designer</span></p>
+                                        </div>
+                                        <div class="jobPopupRow3">
+                                            <div class="location">
+                                                <img src="Icons/location-tick.svg" alt="location image">
+                                                <p><span>Bengaluru, Karnataka</span></p>
+                                            </div>
+                                            <div class="editActiveJobPost">
+                                                <button onclick="editActiveJobpost()">
+                                                    <img src="Icons/edit-outline.svg" alt="edit">
+                                                    <p>Edit</p>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="jobPopupRow4">
+                                            <div class="jobPopupR4Row1 jobPopupR4Rows">
+                                                <div class="jobPopupR4R1Col1 jobPopupR4Cols">
+                                                    <p>Experience</p>
+                                                    <h3><span>2-3 Years</span></h3>
+                                                </div>
+                                                <div class="jobPopupR4R1Col2 jobPopupR4Cols">
+                                                    <p>Salary</p>
+                                                    <h3><span>5-6 LPA</span></h3>
+                                                </div>
+                                                <div class="jobPopupR4R1Col3 jobPopupR4Cols">
+                                                    <p>Job Type</p>
+                                                    <h3><span>Full Time</span></h3>
+                                                </div>
+                                            </div>
+                                            <div class="jobPopupR4Row2 jobPopupR4Rows">
+                                                <div class="jobPopupR4R2Col1 jobPopupR4Cols">
+                                                    <p>Company</p>
+                                                    <h3><span>Lollypop Design Studio</span></h3>
+                                                </div>
+                                                <div class="jobPopupR4R2Col2 jobPopupR4Cols">
+                                                    <p>Mode of work</p>
+                                                    <h3><span>In-Office</span></h3>
+                                                </div>
+                                                <div class="jobPopupR4R2Col3 jobPopupR4Cols">
+                                                    <p>Shifts</p>
+                                                    <h3><span>Morining</span></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="jobPopupRow5">
+                                            <div class="jobPopupR5Col1 tab">
+                                                <button class="tablinks" onclick="openCity(event, 'jobDescription')"
+                                                    id="defaultOpen">Job Description</button>
+                                                <button class="tablinks"
+                                                    onclick="openCity(event, 'company')">Company</button>
+                                                <button class="tablinks"
+                                                    onclick="openCity(event, 'candidates')">Candidates</button>
+                                            </div>
+                                            <div class="jobPopupR5Col2">
+                                                <div id="jobDescription" class="tabcontent">
+                                                    <div class="jobDetailsContainer">
+                                                        <div class="jobDetailsContainerRow1">
+                                                            <h3 class="tabcontentTitle">Key Responsibilities</h3>
+                                                            <p class="tabcontentPara"><span>Lorem ipsum dolor sit amet
+                                                                    consectetur adipisicing elit.</span></p>
+                                                        </div>
+                                                        <div class="jobDetailsContainerRow2">
+                                                            <h3 class="tabcontentTitle">Education</h3>
+                                                            <p class="tabcontentPara"><span>Bachelors in Design</span>
+                                                            </p>
+                                                        </div>
+                                                        <div class="jobDetailsContainerRow3">
+                                                            <div class="mandatorySkills">
+                                                                <h3 class="tabcontentTitle">Madatory Skills</h3>
+                                                                <div class="skillsContainer">
+                                                                    <p class="skillBox"><span>User Interface</span>
+                                                                    <p class="skillBox"><span>User Experience</span>
+                                                                    <p class="skillBox"><span>User Research</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="requiredSkills">
+                                                                <h3 class="tabcontentTitle">Required Skills</h3>
+                                                                <div class="skillsContainer">
+                                                                    <p class="skillBox"><span>HTML</span>
+                                                                    <p class="skillBox"><span>CSS</span>
+                                                                    <p class="skillBox"><span>Java Script</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="jobDetailsContainerRow4">
+                                                            <h3 class="tabcontentTitle">Perks & Benefits</h3>
+                                                            <p class="tabcontentPara"><span>Lorem ipsum dolor sit amet
+                                                                    consectetur, adipisicing elit. Aliquid aspernatur,
+                                                                    incidunt corrupti laborum molestiae dignissimos
+                                                                    commodi veritatis id! Rem asperiores quibusdam sunt
+                                                                    alias delectus quos sed, aspernatur quo beatae
+                                                                    eveniet?</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div id="company" class="tabcontent">
+                                                    <div class="jobDetailsContainer">
+                                                        <h3 class="tabcontentTitle">About company</h3>
+                                                        <p class="tabcontentPara">Lorem ipsum dolor sit, amet
+                                                            consectetur adipisicing elit. Ex
+                                                            repellendus aliquam laboriosam perspiciatis nisi odit
+                                                            numquam,
+                                                            unde magni ad rerum ea molestiae earum libero eius
+                                                            repudiandae?
+                                                            Neque nisi sed harum!</p>
+                                                    </div>
+                                                </div>
+
+                                                <div id="candidates" class="tabcontent">
+                                                    <div class="jobDetailsContainer">
+                                                        <h3 class="tabcontentTitle">Candidates applied</h3>
+                                                        <p class="tabcontentPara">candidates list</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -325,8 +454,9 @@
                                     <p class="candidatesdata">25/02/2024</p>
                                 </div>
                                 <div class="candidatesdataCol view-btn">
-                                    <button class="candidatesdata">View</button>
+                                    <button class="candidatesdata" popovertarget="popup">View</button>
                                     <!-- <p class="candidatesdata">View</p> -->
+                                    <div id="popup" popover> This is a popup</div>
                                 </div>
                             </div>
 
@@ -433,6 +563,59 @@
                                     <!-- <p class="candidatesdata">View</p> -->
                                 </div>
                             </div>
+
+                            <div class="candidatedataRow" id="">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari 10 Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
+                            <div class="candidatedataRow" id="">
+                                <div class="candidatesdataCol companyName">
+                                    <img src="Icons/companyPlaceholder.svg" alt="">
+                                    <p class="candidatesdata">iVari 10 Security Systems</p>
+                                </div>
+                                <div class="candidatesdataCol jobRole">
+                                    <p class="candidatesdata">Developer</p>
+                                </div>
+                                <div class="candidatesdataCol jobExperience">
+                                    <p class="candidatesdata">Fresher</p>
+                                </div>
+                                <div class="candidatesdataCol jobType">
+                                    <p class="candidatesdata">Full Time</p>
+                                </div>
+                                <div class="candidatesdataCol salary">
+                                    <p class="candidatesdata"><span>&#8377; </span>50,000</p>
+                                </div>
+                                <div class="candidatesdataCol date">
+                                    <p class="candidatesdata">25/02/2024</p>
+                                </div>
+                                <div class="candidatesdataCol view-btn">
+                                    <button class="candidatesdata">View</button>
+                                    <!-- <p class="candidatesdata">View</p> -->
+                                </div>
+                            </div>
+
                             <div class="candidatedataRow" id="">
                                 <div class="candidatesdataCol companyName">
                                     <img src="Icons/companyPlaceholder.svg" alt="">
@@ -472,8 +655,8 @@
                             <button id="page6" onclick="changePage(6)">6</button>
                         </div>
                         <button onclick="nextPage()">Next &#8594;</button>
-                    </div>                 
-                    
+                    </div>
+
                 </div>
                 <div class="ajR2col2 slideshow-container">
                     <div class="adSlide fade">
