@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In-Active Jobs</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
+    <link rel="stylesheet" href="css/inActiveJob.css">
     <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
@@ -169,8 +170,7 @@
                                     <img src="Icons/DownIcon.svg" alt="down">
                                 </div>
                                 <div class="repost-btn extra">
-                                    <button class="candidatesdata">Repost</button>
-                                    <!-- <p class="candidatesdata">View</p> -->
+                                    <button class="candidatesdata" popovertarget="jobPopup">Repost</button>
                                 </div>
                             </div>
                         </div>
@@ -198,8 +198,19 @@
                                     <p class="candidatesdata"><span class="green">Hired</span></p>
                                 </div>
                                 <div class="candidatesdataCol repost-btn">
-                                    <button class="candidatesdata">Repost</button>
-                                    <!-- <p class="candidatesdata">View</p> -->
+                                    <button class="candidatesdata" popovertarget="rePostJob">Repost</button>
+                                    <div id="rePostJob" class="repostJob" popover>
+                                        <div class="repostContainer">
+                                            <div class="repostJobRow1">
+                                                <p>Do you want to repost?</p><span>Company Name</span>
+                                            </div>
+                                            <div class="repostJobRow2">
+                                                <button class="actionBtns primaryBtn">Repost</button>
+                                                <button class="actionBtns cancelBtn" popovertarget="rePostJob"
+                                                    popovertargetaction="hide" id="closeRepostBtn">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 

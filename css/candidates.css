@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    color: var(--textcolor);
+    font-family: "Roboto";
+}
+
+:root {
+    --primary-color: #1e0342;
+    --accent-color: #e1f7f5;
+    --accent2-color: #0e46a3;
+    --accent3-color: #9ac8cd;
+    --secondary-tint: #f3f8ff;
+    --dark-color: #1e1e1e;
+    --negative-color: #ff4e4e;
+    --darkgrey-color: #6f6f6f;
+    --lightygrey-color: #d9d9d9;
+    --textfieldgray-color: #f5f5f5;
+    --plane-color: #ffffff;
+    --border-shadow: rgba(23, 26, 31, 0.252);
+    --font-family: "Epilogue", sans-serif;
+}
+
+.epilogue {
+    font-family: var(--font-family);
+}
+
+#candidateViewPopup {
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    background-color: var(--plane-color);
+    border: 1px solid var(--border-shadow);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 1000px;
+    width: 40%;
+    max-height: 75dvh;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.candidateDataPopupRow1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.candidateDataPopupR1Col1,
+.candidateDataPopupR1Col2 {
+    display: flex;
+    gap: 8px;
+}
+
+.candidateDataPopupR1C1Col1 img {
+    width: 40px;
+}
+
+.candidatePopupName {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.location {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--darkgrey-color);
+}
+
+.candidateDataPopupR1C2Col1 button {
+    padding: 6px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.candidateDataPopupR1C2Col1 button img {
+    width: 16px;
+}
+
+.candidateDataPopupR1C2Col2 button {
+    display: flex;
+    gap: 8px;
+    font-size: 16px;
+}
+
+.candidateDataPopupR1C2Col2 button img {
+    width: 16px;
+}
+
+.candidateDataPopupRow2 {
+    display: flex;
+    padding: 16px 0 24px 0;
+    width: 100%;
+}
+
+.candidateDataPopupRow2 hr {
+    color: var(--lightygrey-color);
+    margin: 2px 14px 2px 0px;
+}
+
+.candidateDataPopupR2Col1,
+.candidateDataPopupR2Col2,
+.candidateDataPopupR2Col3,
+.candidateDataPopupR2Col4 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 25%;
+}
+
+.candidatePopupLabel,
+.cdPopupR3Label,
+.cdPopupR4Label,
+.cdPopupR5Label,
+.cdPopupR6Label,
+.canpopR6Col6Label {
+    font-size: 12px;
+    color: var(--darkgrey-color);
+}
+
+.candidatePopupData {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.candidateDataPopupRow3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0px;
+    width: 100%;
+}
+
+.candidateDataPopupR3Col1,
+.candidateDataPopupR3Col2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cdPopupR3Data {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.candidateDataPopupRow4 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0px;
+    width: 100%;
+}
+
+.popupSkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.popupSkillBox {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #ecf6ff;
+    width: fit-content;
+    font-weight: 400;
+    border: 0.5px solid #bdd6ed;
+    border-radius: 4px;
+}
+
+.candidateDataPopupRow5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0px;
+}
+
+.candidateDataPopupR5Col1,
+.candidateDataPopupR5Col2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cdPopupConatact,
+.cdPopupMailId {
+    display: flex;
+    gap: 8px;
+}
+
+.cdPopupR5Data {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.canPopHr {
+    color: var(--lightygrey-color);
+    margin: 8px 0px;
+}
+
+.candidateDataPopupRow6 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0 0 0;
+}
+
+.candidateDataPopupR6C2Col1,
+.candidateDataPopupR6C2Col2,
+.candidateDataPopupR6C2Col3 {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.candidateDataPopupR6Row {
+    display: flex;
+    gap: 1rem;
+}
+
+.candidateDataPopupR6Row input,
+.candidateDataPopupR6Row select {
+    border: none;
+    background-color: var(--plane-color);
+    width: 100%;
+}
+
+.candidateDataPopupR6Col1 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.candidateDataPopupR6Col1 select {
+    width: fit-content;
+    padding: 6px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--accent2-color);
+    background-color: var(--plane-color);
+    color: var(--accent2-color);
+}
+
+.candidateDataPopupR6Col2 {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--lightygrey-color);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.vr {
+    margin: 0px 12px 0 0;
+    border-left: 1px solid var(--lightygrey-color);
+    height: 100%;
+}
+
+.canPopCol6Data {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#statusOpts {
+    color: var(--dark-color);
+    background-color: var(--plane-color);
+}
+
+.candidateDataPopupR6Col1 option {
+    color: var(--dark-color);
+    background-color: transparent;
+}
+
+.candidateDataPopupR6Row2 button {
+    border: 1px solid transparent;
+    background-color: var(--lightygrey-color);
+    color: var(--darkgrey-color);
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.candidateDataPopupR6Row2 button:hover,
+.candidateDataPopupR6Row2 button:focus {
+    background-color: var(--accent2-color);
+    border: 1px solid var(--accent2-color);
+    color: var(--plane-color);
+}

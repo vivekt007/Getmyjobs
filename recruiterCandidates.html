@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Candidates</title>
     <link rel="stylesheet" href="css/recruiterMain.css">
+    <link rel="stylesheet" href="css/candidates.css">
     <script defer src="recruiterScript.js"></script>
 
     <!-- font links open -->
@@ -206,7 +207,7 @@
                                     </form>
                                 </div>
                                 <div class="candidatesReceivedDataCol candidateName">
-                                    <p class="candidatesdata"><span>Darshan Shinde</span></p>
+                                    <p class="candidatesdata"><span>Sagar Hiremath</span></p>
                                 </div>
                                 <div class="candidatesReceivedDataCol candidatejobRole">
                                     <p class="candidatesdata">Developer</p>
@@ -230,7 +231,153 @@
                                     </form>
                                 </div>
                                 <div class="candidatesReceivedDataCol view-candidate-btn">
-                                    <button class="candidatesdata">View</button>
+                                    <button class="candidatesdata" popovertarget="candidateViewPopup">View</button>
+                                    <div id="candidateViewPopup" class="candidateDataPopup" popover>
+                                        <div class="candidateDataPopupContainer">
+
+                                            <div class="candidateDataPopupRow1">
+                                                <div class="candidateDataPopupR1Col1">
+                                                    <div class="candidateDataPopupR1C1Col1">
+                                                        <img src="images/Selva.png" alt="">
+                                                    </div>
+                                                    <div class="candidateDataPopupR1C1Col2">
+                                                        <p class="candidatePopupName"><span>Sagar Hiremath</span></p>
+                                                        <p class="location"><span>Bengaluru, Karnataka, India</span></p>
+                                                    </div>
+                                                </div>
+                                                <div class="candidateDataPopupR1Col2">
+                                                    <div class="candidateDataPopupR1C2Col1">
+                                                        <button><img src="Icons/stars-outline.svg" alt="">
+                                                        </button>
+                                                    </div>
+                                                    <div class="candidateDataPopupR1C2Col2">
+                                                        <button>
+                                                            <img src="Icons/CV-outline.svg" alt="cv Image">
+                                                            <p>View CV</p>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="candidateDataPopupRow2">
+                                                <div class="candidateDataPopupR2Col1">
+                                                    <p class="candidatePopupLabel">Experience</p>
+                                                    <h3 class="candidatePopupData"><span>Fresher</span></h3>
+                                                </div>
+                                                <hr>
+                                                <div class="candidateDataPopupR2Col2">
+                                                    <p class="candidatePopupLabel">Current CTC</p>
+                                                    <h3 class="candidatePopupData"><span>0</span></h3>
+                                                </div>
+                                                <hr>
+                                                <div class="candidateDataPopupR2Col3">
+                                                    <p class="candidatePopupLabel">Expected CTC</p>
+                                                    <h3 class="candidatePopupData"><span>5LPA</span></h3>
+                                                </div>
+                                                <hr>
+                                                <div class="candidateDataPopupR2Col4">
+                                                    <p class="candidatePopupLabel">Notice Period</p>
+                                                    <h3 class="candidatePopupData"><span>15 Days</span></h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="candidateDataPopupRow3">
+                                                <div class="candidateDataPopupR3Col1">
+                                                    <p class="cdPopupR3Label">Role Applied</p>
+                                                    <h2 class="cdPopupR3Data">Data Analyst</h2>
+                                                </div>
+                                                <div class="candidateDataPopupR3Col2">
+                                                    <p class="cdPopupR3Label">Current Role</p>
+                                                    <h2 class="cdPopupR3Data">NA</h2>
+                                                </div>
+                                            </div>
+
+                                            <div class="candidateDataPopupRow4">
+                                                <p class="cdPopupR4Label">Skills</p>
+                                                <div class="popupSkillsContainer">
+                                                    <p class="popupSkillBox">MYSql</p>
+                                                    <p class="popupSkillBox">Python</p>
+                                                    <p class="popupSkillBox">Excel</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="candidateDataPopupRow5">
+                                                <div class="candidateDataPopupR5Col1">
+                                                    <p class="cdPopupR5Label">Contact Details</p>
+                                                    <div class="cdPopupConatact">
+                                                        <img src="Icons/Phone-outline.svg" alt="contact icon">
+                                                        <p class="cdPopupR5Data"><span>9876503214</span></p>
+                                                    </div>
+
+                                                    <div class="cdPopupMailId">
+                                                        <img src="Icons/Mail-outline.svg" alt="mail icon">
+                                                        <p class="cdPopupR5Data"><span>sagarhiremath@gmail.com</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="candidateDataPopupR5Col2">
+                                                    <p class="cdPopupR5Label">Certifications</p>
+                                                    <div class="cdPopupCertifiName">
+                                                        <p class="cdPopupR5Data"><span>Data Analyst</span></p>
+                                                    </div>
+                                                    <div class="cdPopupCertiLevel">
+                                                        <p class="cdPopupR5Data"><span>Advanced</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <hr class="canPopHr">
+
+                                            <div class="candidateDataPopupRow6">
+                                                <h2 class="popUpTitle">Profile Status</h2>
+                                                <div class="candidateDataPopupR6Row">
+                                                    <div class="candidateDataPopupR6Col1">
+                                                        <p class="cdPopupR6Label">Current Status</p>
+                                                        <select type="button" name="canCurStatus" id="canCurStatus"
+                                                            list="statusOpts" placeholder="Options">
+                                                            <datalist id="statusOpts">
+                                                                <option value="Aptitude">Aptitude</option>
+                                                                <option value="technical">Technical</option>
+                                                                <option value="hr">HR</option>
+                                                                <option value="manager">Manager</option>
+                                                            </datalist>
+                                                        </select>
+                                                    </div>
+                                                    <div class="candidateDataPopupR6Col2">
+                                                        <div class="candidateDataPopupR6C2Col1">
+                                                            <p class="canpopR6Col6Label">Date</p>
+                                                            <h4 class="canPopCol6Data"><input type="date"></h4>
+                                                        </div>
+                                                        <div class="vr"></div>
+                                                        <div class="candidateDataPopupR6C2Col2">
+                                                            <p class="canpopR6Col6Label">Meeting On</p>
+                                                            <h4 class="canPopCol6Data">
+                                                                <select type="button" name="scheduleMeet"
+                                                                    id="scheduleMeet" list="scheduleOpts">
+                                                                    <datalist id="scheduleOpts">
+                                                                        <option value="online">Online</option>
+                                                                        <option value="offline">Off-line</option>
+                                                                    </datalist>
+                                                                </select>
+                                                            </h4>
+                                                        </div>
+                                                        <div class="vr"></div>
+                                                        <div class="candidateDataPopupR6C2Col3">
+                                                            <p class="canpopR6Col6Label">Time</p>
+                                                            <h4 class="canPopCol6Data">
+                                                                <input type="time" name="scheduleMeetTime"
+                                                                    id="scheduleMeetTime">
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="candidateDataPopupR6Row2">
+                                                    <button class="actionBtns primaryBtn">Schedule Meeting</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -265,7 +412,19 @@
                                     </form>
                                 </div>
                                 <div class="candidatesReceivedDataCol view-candidate-btn">
-                                    <button class="candidatesdata">View</button>
+                                    <button class="candidatesdata" popovertarget="rePostJob">View</button>
+                                    <div id="rePostJob" class="repostJob" popover>
+                                        <div class="repostContainer">
+                                            <div class="repostJobRow1">
+                                                <p>Do you want to repost?</p><span>Company Name</span>
+                                            </div>
+                                            <div class="repostJobRow2">
+                                                <button class="actionBtns primaryBtn">Repost</button>
+                                                <button class="actionBtns cancelBtn" popovertarget="rePostJob"
+                                                    popovertargetaction="hide" id="closeRepostBtn">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
